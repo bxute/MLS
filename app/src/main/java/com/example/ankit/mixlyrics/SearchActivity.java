@@ -174,4 +174,40 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
+    public void FetchRemoteData(){
+
+        //TODO: change url to your own server
+        String url = "http://www.mixedlyrics.com/";
+        StringRequest search_req = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
+                    Log.e("SA[Result Fetched]",s);
+                    ParseResults(s);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+            }
+        }){
+            @Override
+            protected Map<String ,String> getParams(){
+                HashMap<String  ,String> map = new HashMap<>();
+
+                //TODO: add query strings as key/ value pairs to map
+                //map.put("search_term_key","search_term_value");
+
+                return map;
+            }
+        };
+    }
+
+    public void ParseResults(String response){
+        //TODO: parse and store in array list and assign the adapter with arrayList
+    }
+
+
+=======
+>>>>>>> parent of 2a97eb4... done everything except actual url and parser
 }
