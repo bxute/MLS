@@ -12,7 +12,14 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -117,7 +124,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void resetResults(int page_number) {
-            //TODO: set adapter with subset of result
+
             // page numbers starts from 0
             ArrayList<SearchResult> subSearchResult =  new ArrayList<>();
 
@@ -134,9 +141,7 @@ public class SearchActivity extends AppCompatActivity {
 
     public void LoadResult(String search_term){
         searchResults = new ArrayList<>();
-        //TODO:get Results From API
-        // parse it and store it in arraylist  searchResults
-        // lets have some dummy data of 21
+       FetchRemoteData();
 
         searchResults.add(new SearchResult(search_term+"1","tesing line 1 \n testing line 2 \n  testing line 3 \n testing line 4\n testing line 5"));
         searchResults.add(new SearchResult(search_term+"2","sanam re , tu mera sanam hua re"));
@@ -174,7 +179,7 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-<<<<<<< HEAD
+
     public void FetchRemoteData(){
 
         //TODO: change url to your own server
@@ -205,9 +210,9 @@ public class SearchActivity extends AppCompatActivity {
 
     public void ParseResults(String response){
         //TODO: parse and store in array list and assign the adapter with arrayList
+
+
+
     }
 
-
-=======
->>>>>>> parent of 2a97eb4... done everything except actual url and parser
 }
