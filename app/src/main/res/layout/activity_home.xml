@@ -10,11 +10,11 @@
         android:layout_height="match_parent"
         android:gravity="center_vertical">
         <TextView
-            android:textSize="25dp"
+            android:textSize="@dimen/mls_font_size_home"
             android:layout_marginBottom="20dp"
             android:textColor="@color/PrimaryColor"
             android:layout_gravity="center_horizontal"
-            android:text="Mixed Lyrics Search"
+            android:text="@string/logo_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

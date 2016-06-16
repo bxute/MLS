@@ -1,11 +1,10 @@
 package com.example.ankit.mixlyrics;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,10 +20,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class SearchActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
-    private int RPP=5;
+    private int RPP=10;
     ListView resultListView;
     EditText search_input_box;
     ImageView prev_page , next_page;
@@ -33,7 +33,7 @@ public class SearchActivity extends AppCompatActivity {
     private int current_page_number=0, total_page_count=0;
     boolean CanMoveForth=false;
     boolean canMoveBack=false;
-    private ArrayList<SearchResult> searchResults;
+    private ArrayList<Search_resultsModel> searchResults;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,7 +126,7 @@ public class SearchActivity extends AppCompatActivity {
     private void resetResults(int page_number) {
 
             // page numbers starts from 0
-            ArrayList<SearchResult> subSearchResult =  new ArrayList<>();
+            ArrayList<Search_resultsModel> subSearchResult =  new ArrayList<>();
 
             int startIndex = (page_number-1)*RPP+1;
             int endIndex = (page_number)*RPP-1;
@@ -139,48 +139,120 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    public void LoadResult(String search_term){
+    public void LoadResult(final String search_term){
         searchResults = new ArrayList<>();
-       FetchRemoteData();
 
-        searchResults.add(new SearchResult(search_term+"1","tesing line 1 \n testing line 2 \n  testing line 3 \n testing line 4\n testing line 5"));
-        searchResults.add(new SearchResult(search_term+"2","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"3","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"4","sanam re , \n\ntu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"5","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"6","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"7","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"8","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"9","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"10","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"11","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"12","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"13","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"14","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"15","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"16","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"17","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"18","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"19","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"20","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"21","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"22","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"23","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"24","sanam re , tu mera sanam hua re"));
-        searchResults.add(new SearchResult(search_term+"25","sanam re , tu mera sanam hua re"));
 
-        total_page_count= searchResults.size()/RPP;
-        int extraa = (searchResults.size()%RPP==0)?0:1;
-        total_page_count+=extraa;
-        current_page_number=1;
-        resetResults(current_page_number);
-        mCurrentPage.setText(current_page_number+"");
-        CanMoveForth=(total_page_count>=2)?true:false;
+        //==========================================//
+        //                 TEST ZONE                //
+        //==========================================//
+
+
+        String response = "{ \"status\":\"0\"," +
+                            "\"error_message\":\"No\"," +
+                            "\"search_parameter\":\"sanam re\"," +
+                            "\"page\":\"1\"," +
+                            "\"number\":\"10\"," +
+                            "\"search_results\":[" +
+
+                                "{" +
+                                    "\"id\":\"1\"," +
+                                    "\"song\":\"Sanam Re \"," +
+                                    "\"song_url\":\"/sanam-re\"," +
+                                    "\"movie\":\"Sanam Re\"," +
+                                    "\"movie_url\":\"www.movie-box.com/sanam-re\"," +
+                                    "\"start_url\":\"www.mxlyrics.com\"," +
+                                    "\"lyrics\":\"sanam re tu mera sanam hua re. bhigi bhigi sadkon pe tera hi naam likhun.tujhko jo na dekhun khud se hi baat karun  khud jo kho diya hun\"," +
+                                    "\"singers\":\"Arjit Singh  Ankit Kumar\"," +
+                                    "\"director\":\"Ankit Kumar\"," +
+                                    "\"lyricist\":\"Javed Akhtar Ankit Kumar\""+
+                                "}," +
+
+                                "{" +
+                                "\"id\":\"1\"," +
+                                "\"song\":\"Sanam Re \"," +
+                                "\"song_url\":\"/sanam-re\"," +
+                                "\"movie\":\"Sanam Re\"," +
+                                "\"movie_url\":\"www.movie-box.com/sanam-re\"," +
+                                "\"start_url\":\"www.mxlyrics.com\"," +
+                                "\"lyrics\":\"sanam re tu mera sanam hua re. bhigi bhigi sadkon pe tera hi naam likhun.tujhko jo na dekhun khud se hi baat karun  khud jo kho diya hun\"," +
+                                "\"singers\":\"Arjit Singh  Ankit Kumar\"," +
+                                "\"director\":\"Ankit Kumar\"," +
+                                "\"lyricist\":\"Javed Akhtar Ankit Kumar\""+
+                                "}," +
+
+                                "{" +
+                                "\"id\":\"1\"," +
+                                "\"song\":\"Sanam Re \"," +
+                                "\"song_url\":\"/sanam-re\"," +
+                                "\"movie\":\"Sanam Re\"," +
+                                "\"movie_url\":\"www.movie-box.com/sanam-re\"," +
+                                "\"start_url\":\"www.mxlyrics.com\"," +
+                                "\"lyrics\":\"sanam re tu mera sanam hua re. bhigi bhigi sadkon pe tera hi naam likhun.tujhko jo na dekhun khud se hi baat karun  khud jo kho diya hun\"," +
+                                "\"singers\":\"Arjit Singh  Ankit Kumar\"," +
+                                "\"director\":\"Ankit Kumar\"," +
+                                "\"lyricist\":\"Javed Akhtar Ankit Kumar\""+
+                                "}," +
+
+                                "{" +
+                                "\"id\":\"1\"," +
+                                "\"song\":\"Sanam Re \"," +
+                                "\"song_url\":\"/sanam-re\"," +
+                                "\"movie\":\"Sanam Re\"," +
+                                "\"movie_url\":\"www.movie-box.com/sanam-re\"," +
+                                "\"start_url\":\"www.mxlyrics.com\"," +
+                                "\"lyrics\":\"sanam re tu mera sanam hua re. bhigi bhigi sadkon pe tera hi naam likhun.tujhko jo na dekhun khud se hi baat karun  khud jo kho diya hun\"," +
+                                "\"singers\":\"Arjit Singh  Ankit Kumar\"," +
+                                "\"director\":\"Ankit Kumar\"," +
+                                "\"lyricist\":\"Javed Akhtar Ankit Kumar\""+
+                                "}," +
+
+                                "{" +
+                                "\"id\":\"1\"," +
+                                "\"song\":\"Sanam Re \"," +
+                                "\"song_url\":\"/sanam-re\"," +
+                                "\"movie\":\"Sanam Re\"," +
+                                "\"movie_url\":\"www.movie-box.com/sanam-re\"," +
+                                "\"start_url\":\"www.mxlyrics.com\"," +
+                                "\"lyrics\":\"sanam re tu mera sanam hua re. bhigi bhigi sadkon pe tera hi naam likhun.tujhko jo na dekhun khud se hi baat karun  khud jo kho diya hun\"," +
+                                "\"singers\":\"Arjit Singh  Ankit Kumar\"," +
+                                "\"director\":\"Ankit Kumar\"," +
+                                "\"lyricist\":\"Javed Akhtar Ankit Kumar\""+
+                                "}" +
+
+                            "]}";
+
+
+                Log.e("","============--------=========");
+                Log.e("",response);
+                Log.e("","============--------=========");
+
+            ParseResults(response);
+
+        //====================//
+        //       END          //
+        //====================//
+
+        // here we load 1 page data and others in thread
+ //TODO:uncomment it       FetchRemoteData(search_term , 1 ,10);
+
+        // loading more list in background
+// TODO:uncomment this part
+//        new Handler().post(new Runnable() {
+//            @Override
+//            public void run() {
+//                int count = 10;
+//                while(count >2){
+//                    FetchRemoteData(search_term,12-count,10);
+//                    count--;
+//                }
+//            }
+//        });
 
     }
 
 
-    public void FetchRemoteData(){
+    public void FetchRemoteData(final String search_term , final int page_number , final int result_count){
 
         //TODO: change url to your own server
         String url = "http://www.mixedlyrics.com/";
@@ -199,9 +271,9 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             protected Map<String ,String> getParams(){
                 HashMap<String  ,String> map = new HashMap<>();
-
-                //TODO: add query strings as key/ value pairs to map
-                //map.put("search_term_key","search_term_value");
+                map.put("search_param",search_term);
+                map.put("page",page_number+"");
+                map.put("number",result_count+"");
 
                 return map;
             }
@@ -209,8 +281,25 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     public void ParseResults(String response){
-        //TODO: parse and store in array list and assign the adapter with arrayList
 
+        RootModel rootModel = null;
+        RootModelParser parser = new RootModelParser();
+        rootModel = parser.parseRootModel(response);
+
+        //appending results list
+        for(int i = 0 ;i<rootModel.search_results.size();i++){
+            searchResults.add(rootModel.search_results.get(i));
+        }
+
+        total_page_count= searchResults.size()/RPP;
+        int extraa = (searchResults.size()%RPP==0)?0:1;
+        total_page_count+=extraa;
+        current_page_number=1;
+        resetResults(current_page_number);
+        mCurrentPage.setText(current_page_number+"");
+        CanMoveForth=(total_page_count>=2)?true:false;
+
+        adapter.setResultList(searchResults);
 
 
     }

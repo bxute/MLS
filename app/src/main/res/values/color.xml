@@ -2,4 +2,7 @@
 <resources>
     <color name="PrimaryColor">#ee6715</color>
     <color name="PrimaryColorDark">#ce570f</color>
+    <color name="TittleColor">#1a0dab</color>
+    <color name="LinkColor">#006621</color>
+    <color name="TextColor">#545454</color>
 </resources>
