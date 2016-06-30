@@ -16,7 +16,6 @@ class RootModelParser {
 			RootModel local_model = null;
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
-
 					ArrayList<Search_resultsModel> search_resultss = new ArrayList<>();
 					JSONArray search_results_arr = jsobj.getJSONArray("search_results");
 					for(int i = 0 ;i<search_results_arr.length();i++){
