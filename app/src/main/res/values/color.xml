@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="PrimaryColor">#ee6715</color>
-    <color name="PrimaryColorDark">#ce570f</color>
+    <color name="PrimaryColor">#FF3D00</color>
+    <color name="PrimaryColorDark">#ee2c00</color>
+    <color name="White">#FFFFFF</color>
     <color name="TittleColor">#1a0dab</color>
     <color name="LinkColor">#006621</color>
     <color name="TextColor">#545454</color>
+    <color name="ButtonColor">#337AB7</color>
+    <color name="ButtonBorder">#2E6DA4</color>
 </resources>

@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_home">Home</string>
     <string name="logo_character">Mixed Lyrics Search</string>
+    <string name="title_activity_web_browser_helper">WebBrowserHelper</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
