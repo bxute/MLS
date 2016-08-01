@@ -2,68 +2,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
-    >
-<TextView
-    android:gravity="center"
-    android:textSize="@dimen/mls_font_size_search"
-    android:textColor="#ffffff"
-    android:background="@color/PrimaryColor"
-    android:padding="0dp"
-    android:id="@+id/title"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:text="@string/logo_character"/>
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/title_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PrimaryColor"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@color/PrimaryColor"
+            android:text="@string/logo_character"
+            android:textColor="#ffffff"
+            android:textSize="45dp"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="9"
+            android:background="@color/PrimaryColor"
+            android:paddingTop="10dp"
+            android:text="Mixed Lyrics Search"
+            android:textColor="@color/White"
+            android:textSize="20dp" />
+    </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="horizontal"
+        android:id="@+id/search_bar_section"
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:layout_below="@+id/title_holder"
         android:background="@color/PrimaryColor"
-        android:id="@+id/search_bar_section"
-        android:layout_below="@+id/title"
-        android:paddingLeft="15dp"
-        android:weightSum="1"
-        android:paddingTop="10dp"
+        android:orientation="horizontal"
         android:paddingBottom="10dp"
-        >
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:weightSum="1">
 
         <EditText
-            android:textAlignment="textStart"
-            android:hint="Enter Song Name"
             android:id="@+id/search_input"
-            android:layout_weight="0.8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:padding="10dp"
-            android:background="@drawable/search"
-            android:maxLines="1"
-            android:textSize="15dp"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/PrimaryColorDark"
             android:layout_marginRight="10dp"
-            />
+            android:layout_weight="0.8"
+            android:background="@drawable/search"
+            android:hint="Enter Song Name"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:ems="10"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textAlignment="textStart"
+            android:textSize="15dp" />
 
         <ImageButton
             android:id="@+id/fire_search_btn"
             android:layout_width="0dp"
-            android:layout_weight="0.2"
             android:layout_height="match_parent"
-            android:src="@android:drawable/ic_menu_search"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.2"
             android:background="@drawable/button"
             android:contentDescription="Search"
-            android:layout_marginRight="10dp"
-            />
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="@color/PrimaryColorDark" />
 
     </LinearLayout>
-<ListView
-    android:layout_marginTop="5dp"
-    android:dividerHeight="4dp"
-    android:padding="4dp"
-    android:id="@+id/search_result_list"
-    android:layout_below="@+id/search_bar_section"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
-    />
+
+    <ListView
+        android:id="@+id/search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_bar_section"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:dividerHeight="4dp"
+        android:padding="4dp" />
 </RelativeLayout>

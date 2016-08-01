@@ -1,11 +1,15 @@
 package com.example.ankit.mixlyrics;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -58,6 +62,20 @@ public class SearchActivity extends AppCompatActivity {
 
         search_t = getIntent().getExtras().getString("searchTerm");
         search_input_box.setText(search_t);
+        search_input_box.setOnEditorActionListener(
+                new TextView.OnEditorActionListener() {
+                    @Override
+                    public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                        if(i == EditorInfo.IME_ACTION_SEARCH) {
+                            String search_term = search_input_box.getText().toString();
+                            progressDialog.show();
+                            LoadResult(search_term);
+                            return true;
+                        }
+                        return false;
+                    }
+                }
+        );
         LoadResult(search_t);
 
         //================================================================//
@@ -135,7 +153,7 @@ public class SearchActivity extends AppCompatActivity {
                         Log.e("SA [RF] ", s);
                         ParseResults(s);
                         progressDialog.dismiss();
-                    }
+                                            }
                 },
                 new Response.ErrorListener() {
                     @Override

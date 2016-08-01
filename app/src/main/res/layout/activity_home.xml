@@ -1,76 +1,72 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ankit.mixlyrics.Home">
 
     <LinearLayout
-        android:padding="4dp"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical">
+        android:background="@color/White"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="4dp">
+
         <TextView
-            android:textSize="@dimen/mls_font_size_home"
-            android:layout_marginBottom="20dp"
-            android:textColor="@color/PrimaryColor"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/logo_character"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-100dp"
+            android:text="@string/logo_character"
+            android:textColor="@color/PrimaryColor"
+            android:textSize="@dimen/mls_font_size_home" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            android:text="Mixed Lyrics Search"
+            android:textColor="@color/PrimaryColor"
+            android:textColorHighlight="@color/PrimaryColor"
+            android:textSize="30dp" />
 
         <EditText
             android:id="@+id/home_search_input"
-            android:hint="\t\t\t\t\tSong title , Artist , lyrics part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/home_search_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical" />
-        <LinearLayout
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioGroup
-                android:id="@+id/search_method_radio"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:padding="8dp"
-                    android:text="Track"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:padding="8dp"
-                    android:text="Artist"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:padding="8dp"
-                    android:text="Album"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Search for.."
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/PrimaryColorDark"
+            android:textColorHint="@color/PrimaryColor"
+            android:textCursorDrawable="@null" />
 
         <TextView
-            android:elevation="2dp"
             android:id="@+id/fire_search_home"
-            android:textColor="@color/PrimaryColor"
-            android:textSize="15dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:gravity="center"
-            android:background="@drawable/home_search_btn"
-            android:text="Search"
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/home_search_btn"
+            android:backgroundTint="@color/PrimaryColorDark"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:text="Go"
+            android:textColor="@color/White"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp" />
     </LinearLayout>
 
 

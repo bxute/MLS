@@ -5,6 +5,7 @@
     >
     <size android:width="100dp" android:height="20dp"></size>
     <corners android:radius="4dp"></corners>
-    <stroke android:color="@color/ButtonBorder" android:width="1dp"></stroke>
-    <solid android:color="@color/ButtonColor"></solid>
+    <stroke android:color="@color/PrimaryColorDark"
+        android:width="1dp"></stroke>
+    <solid android:color="@color/White"></solid>
     </shape>
