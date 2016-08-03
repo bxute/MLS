@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        Config.init();
         search_btn = (TextView) findViewById(R.id.fire_search_home);
         search_term = (EditText) findViewById(R.id.home_search_input);
         search_btn.setOnClickListener(new View.OnClickListener() {

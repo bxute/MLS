@@ -42,7 +42,7 @@
             android:background="@drawable/home_search_input"
             android:ems="10"
             android:gravity="center_vertical"
-            android:hint="Search for.."
+            android:hint="Search Music..."
             android:imeOptions="actionSearch"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"

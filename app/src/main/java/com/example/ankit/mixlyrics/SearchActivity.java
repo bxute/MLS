@@ -140,10 +140,13 @@ public class SearchActivity extends AppCompatActivity {
     public void FetchRemoteData(final String search_term , final int page_number , final int result_count){
 
         //TODO: change url to your own server
-        String url = Config.URl +
+        String url = Config.getIP() +
                 "api?search_param=" + URLEncoder.encode(search_term) +
                 "&page=" + URLEncoder.encode(String.valueOf(page_number)) +
                 "&number=" + URLEncoder.encode(String.valueOf(result_count));
+
+        Log.e("url ",url);
+
         StringRequest search_req = new StringRequest(
                 Request.Method.GET,
                 url,
@@ -164,7 +167,7 @@ public class SearchActivity extends AppCompatActivity {
                     }
                 }
         );
-        search_req.setRetryPolicy(new DefaultRetryPolicy(1000, 5, 0));
+        search_req.setRetryPolicy(new DefaultRetryPolicy(1000, 5, 1));
         AppManager.getInstance().addToRequestQueue(search_req, "tag", SearchActivity.this);
 
     }

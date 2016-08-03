@@ -62,7 +62,7 @@ public class ResultListAdapter extends ArrayAdapter<Search_resultsModel> {
                             ids = ids + model.id + ",";
                         }
 
-                        String url = Config.URl +
+                        String url = Config.getIP() +
                                 "redir?param=" + URLEncoder.encode(search_term) +
                                 "&ids_presented=" + ids +
                                 "&page=0&number=100" +

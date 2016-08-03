@@ -60,7 +60,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0.8"
             android:background="@drawable/search"
-            android:hint="Enter Song Name"
+            android:hint="Search Music..."
             android:imeOptions="actionSearch"
             android:singleLine="true"
             android:ems="10"
