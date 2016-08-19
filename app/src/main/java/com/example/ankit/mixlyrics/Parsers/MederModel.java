@@ -1,17 +1,17 @@
 
 class MederModel {
 
-	public DesModel _des;
-	public FoltModel _folt;
-	public PricemModel _pricem;
 	public TagerModel _tager;
+	public FoltModel _folt;
+	public DesModel _des;
+	public PricemModel _pricem;
 
-	public MederModel(DesModel des, FoltModel folt, PricemModel pricem, TagerModel tager) {
+	public MederModel(TagerModel tager, FoltModel folt, DesModel des, PricemModel pricem) {
 
-		this._des = des;
-		this._folt = folt;
-		this._pricem = pricem;
 		this._tager = tager;
+		this._folt = folt;
+		this._des = des;
+		this._pricem = pricem;
 
 	}
 

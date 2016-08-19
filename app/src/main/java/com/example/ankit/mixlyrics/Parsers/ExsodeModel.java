@@ -2,37 +2,35 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public ContentModel _content;
 	public String uploadedby;
-	public String uploadedon;
+	public ThetaModel _theta;
 	public int commentCount;
-	public AccesspiModel _accesspi;
-	public String id;
-	public ArrayList<String> tags;
-	public PlayerModel _player;
 	public String description;
+	public ArePIseedsModel _arePIseeds;
+	public ContestNoModel _contestNo;
 	public String title;
-	public ThumbnailModel _thumbnail;
-	public String updatededon;
+	public String id;
 	public String updatedon;
+	public String updatededon;
 	public StatuModel _statu;
+	public String uploadedon;
+	public ArrayList<String> tags;
 
-	public ExsodeModel(ContentModel content, String uploadedby, String uploadedon, int commentCount, AccesspiModel accesspi, String id, ArrayList<String> tags, PlayerModel player, String description, String title, ThumbnailModel thumbnail, String updatededon, String updatedon, StatuModel statu) {
+	public ExsodeModel(String uploadedby, ThetaModel theta, int commentCount, String description, ArePIseedsModel arePIseeds, ContestNoModel contestNo, String title, String id, String updatedon, String updatededon, StatuModel statu, String uploadedon, ArrayList<String> tags) {
 
-		this._content = content;
 		this.uploadedby = uploadedby;
-		this.uploadedon = uploadedon;
+		this._theta = theta;
 		this.commentCount = commentCount;
-		this._accesspi = accesspi;
-		this.id = id;
-		this.tags = tags;
-		this._player = player;
 		this.description = description;
+		this._arePIseeds = arePIseeds;
+		this._contestNo = contestNo;
 		this.title = title;
-		this._thumbnail = thumbnail;
-		this.updatededon = updatededon;
+		this.id = id;
 		this.updatedon = updatedon;
+		this.updatededon = updatededon;
 		this._statu = statu;
+		this.uploadedon = uploadedon;
+		this.tags = tags;
 
 	}
 

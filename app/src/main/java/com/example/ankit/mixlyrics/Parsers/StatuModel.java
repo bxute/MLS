@@ -1,21 +1,21 @@
 
 class StatuModel {
 
-	public int duration;
-	public String value;
+	public int modelist;
+	public ContainerModel _container;
 	public String comment;
-	public String list;
+	public String value;
 	public String reason;
-	public ContentModel _content;
+	public String list;
 
-	public StatuModel(int duration, String value, String comment, String list, String reason, ContentModel content) {
+	public StatuModel(int modelist, ContainerModel container, String comment, String value, String reason, String list) {
 
-		this.duration = duration;
-		this.value = value;
+		this.modelist = modelist;
+		this._container = container;
 		this.comment = comment;
-		this.list = list;
+		this.value = value;
 		this.reason = reason;
-		this._content = content;
+		this.list = list;
 
 	}
 

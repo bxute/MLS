@@ -5,10 +5,9 @@ import org.json.JSONArray;
 
 class ExsodeModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
-		AccesspiModelParser accesspi_parser = new AccesspiModelParser();
-		PlayerModelParser player_parser = new PlayerModelParser();
-		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
+		ThetaModelParser theta_parser = new ThetaModelParser();
+		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
+		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
 		StatuModelParser statu_parser = new StatuModelParser();
 
 		public ExsodeModelParser() {
@@ -20,9 +19,13 @@ class ExsodeModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
 
-					AccesspiModel accesspi = accesspi_parser.parseAccesspiModel(jsobj.getJSONObject("accesspi").toString()); 
+					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
+
+					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
+
+					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString()); 
 
 					ArrayList<String> tags = new ArrayList<>();
 					JSONArray tags_arr = jsobj.getJSONArray("tags");
@@ -33,13 +36,7 @@ class ExsodeModelParser {
 
 					}
 
-					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
-
-					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
-
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
-
-					local_model = new ExsodeModel(content, jsobj.getString("uploadedby") , jsobj.getString("uploadedon") , jsobj.getInt("commentCount") , accesspi, jsobj.getString("id") , tagsplayer, jsobj.getString("description") , jsobj.getString("title") , thumbnail, jsobj.getString("updatededon") , jsobj.getString("updatedon") , statu, );
+					local_model = new ExsodeModel(jsobj.getString("uploadedby") , theta, jsobj.getInt("commentCount") , jsobj.getString("description") , arePIseeds, contestNo, jsobj.getString("title") , jsobj.getString("id") , jsobj.getString("updatedon") , jsobj.getString("updatededon") , statu, jsobj.getString("uploadedon") , tags);
  			} 
 			catch (JSONException e){
 
