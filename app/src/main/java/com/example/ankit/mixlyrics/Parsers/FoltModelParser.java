@@ -13,7 +13,7 @@ class FoltModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new FoltModel(jsobj.getString("description") , jsobj.getBoolean("required") , jsobj.getString("type") , );
+					local_model = new FoltModel(jsobj.getBoolean("required") , jsobj.getString("type") , jsobj.getString("description") , );
  			} 
 			catch (JSONException e){
 

@@ -2,37 +2,37 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public AccesspiModel _accesspi;
+	public ThumbnailModel _thumbnail;
 	public String title;
+	public String id;
+	public String uploadedon;
+	public ContentModel _content;
+	public int commentCount;
+	public String uploadedby;
+	public String updatededon;
+	public PlayerModel _player;
+	public String description;
+	public AccesspiModel _accesspi;
+	public ArrayList<String> tags;
 	public StatuModel _statu;
 	public String updatedon;
-	public String description;
-	public int commentCount;
-	public String uploadedon;
-	public PlayerModel _player;
-	public String id;
-	public String uploadedby;
-	public ArrayList<String> tags;
-	public ThumbnailModel _thumbnail;
-	public String updatededon;
-	public ContentModel _content;
 
-	public ExsodeModel(AccesspiModel accesspi, String title, StatuModel statu, String updatedon, String description, int commentCount, String uploadedon, PlayerModel player, String id, String uploadedby, ArrayList<String> tags, ThumbnailModel thumbnail, String updatededon, ContentModel content) {
+	public ExsodeModel(ThumbnailModel thumbnail, String title, String id, String uploadedon, ContentModel content, int commentCount, String uploadedby, String updatededon, PlayerModel player, String description, AccesspiModel accesspi, ArrayList<String> tags, StatuModel statu, String updatedon) {
 
-		this._accesspi = accesspi;
+		this._thumbnail = thumbnail;
 		this.title = title;
+		this.id = id;
+		this.uploadedon = uploadedon;
+		this._content = content;
+		this.commentCount = commentCount;
+		this.uploadedby = uploadedby;
+		this.updatededon = updatededon;
+		this._player = player;
+		this.description = description;
+		this._accesspi = accesspi;
+		this.tags = tags;
 		this._statu = statu;
 		this.updatedon = updatedon;
-		this.description = description;
-		this.commentCount = commentCount;
-		this.uploadedon = uploadedon;
-		this._player = player;
-		this.id = id;
-		this.uploadedby = uploadedby;
-		this.tags = tags;
-		this._thumbnail = thumbnail;
-		this.updatededon = updatededon;
-		this._content = content;
 
 	}
 
