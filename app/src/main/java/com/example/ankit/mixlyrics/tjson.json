@@ -1,20 +1,10 @@
 {
         "name":"Product",
-        "properties":
+        "meder":
         {
                 "des":
                 {
-                        "type":"number",
-                         "rating":4.63,
-                         "ratingCount":68,
-                         "viewCount":220101,
-                         "favoriteCount":201,
-                            "syndicate":"allowed",
-                            "commentVote":"allowed",
-                            "rate":"allowed",
-                            "list":"allowed",
-                            "comment":"allowed",
-                            
+                        "type":"number",                            
                         "description":"Product identifier",
                         "required":true
                 },
@@ -70,14 +60,6 @@
          "commentCount":22,
          "statu":{
            "duration":2840,
-         "aspectRatio":"widescreen",
-         "rating":4.63,
-         "ratingCount":68,
-         "viewCount":220101,
-         "favoriteCount":201,
-            "syndicate":"allowed",
-            "commentVote":"allowed",
-            "rate":"allowed",
             "list":"allowed",
             "comment":"allowed",
             "value":"restricted",
