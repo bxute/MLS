@@ -1,13 +1,13 @@
 
 class AccesspiModel {
 
-	public String aspectRatio;
 	public String videoRespond;
+	public String aspectRatio;
 
-	public AccesspiModel(String aspectRatio, String videoRespond) {
+	public AccesspiModel(String videoRespond, String aspectRatio) {
 
-		this.aspectRatio = aspectRatio;
 		this.videoRespond = videoRespond;
+		this.aspectRatio = aspectRatio;
 
 	}
 

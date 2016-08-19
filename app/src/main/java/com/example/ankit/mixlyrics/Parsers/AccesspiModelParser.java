@@ -13,7 +13,7 @@ class AccesspiModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new AccesspiModel(jsobj.getString("aspectRatio") , jsobj.getString("videoRespond") , );
+					local_model = new AccesspiModel(jsobj.getString("videoRespond") , jsobj.getString("aspectRatio") , );
  			} 
 			catch (JSONException e){
 
