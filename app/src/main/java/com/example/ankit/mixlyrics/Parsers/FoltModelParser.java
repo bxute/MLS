@@ -3,6 +3,7 @@ import org.json.JSONObject;
 
 class FoltModelParser {
 
+		DesModelParser des_parser = new DesModelParser();
 
 		public FoltModelParser() {
 		}
@@ -13,7 +14,9 @@ class FoltModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new FoltModel(jsobj.getString("type") , jsobj.getString("description") , jsobj.getBoolean("required") , );
+					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
+
+					local_model = new FoltModel(jsobj.getBoolean("required") , jsobj.getString("type") , jsobj.getString("description") , des, );
  			} 
 			catch (JSONException e){
 
