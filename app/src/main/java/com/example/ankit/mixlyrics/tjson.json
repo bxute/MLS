@@ -1,6 +1,6 @@
 {
-        "name":"Product",
-        "properties":
+        "naste":"Product",
+        "pros":
         {
                 "des":
                 {
@@ -33,7 +33,7 @@
  "wric":{
     "updated":"2010-01-07T19:58:42.949Z",
     "itemsPerPage":1,
-    "exsode":[
+    "remede":[
         {"id":"hYB0mn5zh2c",
          "uploadedon":"2007-06-05T22:07:03.000Z",
          "updatedon":"2010-01-07T13:26:50.000Z",
@@ -73,7 +73,7 @@
             "value":"restricted",
             "reason":"limitedSyndication"
          },
-         "accesspi":{
+         "acce":{
           "aspectRatio":"widescreen",
          "rating":4.63,
          "ratingCount":68,
