@@ -3,7 +3,7 @@ import org.json.JSONObject;
 
 class StatuModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
+		ContainerModelParser container_parser = new ContainerModelParser();
 
 		public StatuModelParser() {
 		}
@@ -14,9 +14,9 @@ class StatuModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+					ContainerModel container = container_parser.parseContainerModel(jsobj.getJSONObject("container").toString());
 
-					local_model = new StatuModel(jsobj.getInt("duration") , jsobj.getString("value") , jsobj.getString("comment") , jsobj.getString("list") , jsobj.getString("reason") , content, );
+					local_model = new StatuModel(jsobj.getInt("modelist") , container, jsobj.getString("comment") , jsobj.getString("value") , jsobj.getString("reason") , jsobj.getString("list") , );
  			} 
 			catch (JSONException e){
 
