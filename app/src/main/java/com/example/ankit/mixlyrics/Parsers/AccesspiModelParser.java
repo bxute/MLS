@@ -3,6 +3,7 @@ import org.json.JSONObject;
 
 class AccesspiModelParser {
 
+		ContentModelParser content_parser = new ContentModelParser();
 
 		public AccesspiModelParser() {
 		}
@@ -13,7 +14,9 @@ class AccesspiModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new AccesspiModel(jsobj.getString("videoRespond") , jsobj.getString("aspectRatio") , );
+					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+
+					local_model = new AccesspiModel(jsobj.getString("aspectRatio") , jsobj.getString("videoRespond") , jsobj.getInt("duration") , jsobj.getString("value") , jsobj.getString("comment") , jsobj.getString("list") , jsobj.getString("reason") , content, );
  			} 
 			catch (JSONException e){
 

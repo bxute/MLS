@@ -16,7 +16,7 @@ class DesModelParser {
 
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
 
-					local_model = new DesModel(jsobj.getBoolean("required") , jsobj.getString("type") , jsobj.getString("description") , content, );
+					local_model = new DesModel(content, jsobj.getString("type") , jsobj.getBoolean("required") , jsobj.getString("description") , );
  			} 
 			catch (JSONException e){
 

@@ -2,37 +2,37 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public ThumbnailModel _thumbnail;
-	public String title;
-	public String id;
-	public String uploadedon;
 	public ContentModel _content;
-	public int commentCount;
 	public String uploadedby;
-	public String updatededon;
+	public String uploadedon;
+	public int commentCount;
+	public AccesspiModel _accesspi;
+	public String id;
+	public ArrayList<String> tags;
 	public PlayerModel _player;
 	public String description;
-	public AccesspiModel _accesspi;
-	public ArrayList<String> tags;
-	public StatuModel _statu;
+	public String title;
+	public ThumbnailModel _thumbnail;
+	public String updatededon;
 	public String updatedon;
+	public StatuModel _statu;
 
-	public ExsodeModel(ThumbnailModel thumbnail, String title, String id, String uploadedon, ContentModel content, int commentCount, String uploadedby, String updatededon, PlayerModel player, String description, AccesspiModel accesspi, ArrayList<String> tags, StatuModel statu, String updatedon) {
+	public ExsodeModel(ContentModel content, String uploadedby, String uploadedon, int commentCount, AccesspiModel accesspi, String id, ArrayList<String> tags, PlayerModel player, String description, String title, ThumbnailModel thumbnail, String updatededon, String updatedon, StatuModel statu) {
 
-		this._thumbnail = thumbnail;
-		this.title = title;
-		this.id = id;
-		this.uploadedon = uploadedon;
 		this._content = content;
-		this.commentCount = commentCount;
 		this.uploadedby = uploadedby;
-		this.updatededon = updatededon;
+		this.uploadedon = uploadedon;
+		this.commentCount = commentCount;
+		this._accesspi = accesspi;
+		this.id = id;
+		this.tags = tags;
 		this._player = player;
 		this.description = description;
-		this._accesspi = accesspi;
-		this.tags = tags;
-		this._statu = statu;
+		this.title = title;
+		this._thumbnail = thumbnail;
+		this.updatededon = updatededon;
 		this.updatedon = updatedon;
+		this._statu = statu;
 
 	}
 

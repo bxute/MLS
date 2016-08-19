@@ -5,10 +5,10 @@ import org.json.JSONArray;
 
 class ExsodeModelParser {
 
-		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
 		ContentModelParser content_parser = new ContentModelParser();
-		PlayerModelParser player_parser = new PlayerModelParser();
 		AccesspiModelParser accesspi_parser = new AccesspiModelParser();
+		PlayerModelParser player_parser = new PlayerModelParser();
+		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
 		StatuModelParser statu_parser = new StatuModelParser();
 
 		public ExsodeModelParser() {
@@ -20,11 +20,7 @@ class ExsodeModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
-
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
-
-					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
 
 					AccesspiModel accesspi = accesspi_parser.parseAccesspiModel(jsobj.getJSONObject("accesspi").toString()); 
 
@@ -37,9 +33,13 @@ class ExsodeModelParser {
 
 					}
 
+					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
+
+					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
+
 					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
 
-					local_model = new ExsodeModel(thumbnail, jsobj.getString("title") , jsobj.getString("id") , jsobj.getString("uploadedon") , content, jsobj.getInt("commentCount") , jsobj.getString("uploadedby") , jsobj.getString("updatededon") , player, jsobj.getString("description") , accesspi, tagsstatu, jsobj.getString("updatedon") , );
+					local_model = new ExsodeModel(content, jsobj.getString("uploadedby") , jsobj.getString("uploadedon") , jsobj.getInt("commentCount") , accesspi, jsobj.getString("id") , tagsplayer, jsobj.getString("description") , jsobj.getString("title") , thumbnail, jsobj.getString("updatededon") , jsobj.getString("updatedon") , statu, );
  			} 
 			catch (JSONException e){
 
