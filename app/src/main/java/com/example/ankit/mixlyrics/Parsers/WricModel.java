@@ -3,14 +3,14 @@ import java.util.ArrayList;
 class WricModel {
 
 	public ArrayList<ReplModel> repl;
-	public String updated;
 	public int itemsPerPage;
+	public String updated;
 
-	public WricModel(ArrayList<ReplModel> repl, String updated, int itemsPerPage) {
+	public WricModel(ArrayList<ReplModel> repl, int itemsPerPage, String updated) {
 
 		this.repl = repl;
-		this.updated = updated;
 		this.itemsPerPage = itemsPerPage;
+		this.updated = updated;
 
 	}
 

@@ -6,7 +6,7 @@
          "uploadedby":"GoogleDeveloperDay",
          "updatededon":"2010-01-07T19:58:42.949Z",
          
-        "pros":
+        "accurse":
         {
                 "des":
                 {
@@ -20,13 +20,20 @@
                          "updatededon":"2010-01-07T19:58:42.949Z"
          
                 },
-                "folt":
+                "fest":
                 {
                         "description":"Name of the product",
                         "type":"string",
-                        "required":true
+                        "required":true,
+                        "type":"number",
+                        "description":"Product identifier",
+                        "required":true,
+                        "id":"hYB0mn5zh2c",
+                         "uploadedon":"2007-06-05T22:07:03.000Z",
+                         "updatedon":"2010-01-07T13:26:50.000Z",
+                         "uploadedby":"GoogleDeveloperDay"
                 },
-                "pricem":
+                "priceme":
                 {
                         "type":"number",
                         "minimum":0,

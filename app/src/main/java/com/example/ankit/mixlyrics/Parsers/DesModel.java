@@ -1,25 +1,25 @@
 
 class DesModel {
 
-	public String type;
+	public String description;
 	public String uploadedby;
 	public String id;
-	public String updatededon;
-	public String description;
-	public String updatedon;
-	public Boolean required;
 	public String uploadedon;
+	public String type;
+	public String updatedon;
+	public String updatededon;
+	public Boolean required;
 
-	public DesModel(String type, String uploadedby, String id, String updatededon, String description, String updatedon, Boolean required, String uploadedon) {
+	public DesModel(String description, String uploadedby, String id, String uploadedon, String type, String updatedon, String updatededon, Boolean required) {
 
-		this.type = type;
+		this.description = description;
 		this.uploadedby = uploadedby;
 		this.id = id;
-		this.updatededon = updatededon;
-		this.description = description;
-		this.updatedon = updatedon;
-		this.required = required;
 		this.uploadedon = uploadedon;
+		this.type = type;
+		this.updatedon = updatedon;
+		this.updatededon = updatededon;
+		this.required = required;
 
 	}
 

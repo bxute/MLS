@@ -3,36 +3,36 @@ import java.util.ArrayList;
 class ReplModel {
 
 	public ArrayList<String> tags;
-	public String uploadedby;
-	public String title;
-	public String updatededon;
-	public String description;
-	public String id;
-	public AcceModel _acce;
-	public String uploadedon;
-	public int commentCount;
-	public StatuModel _statu;
 	public ContentModel _content;
-	public String updatedon;
+	public String title;
 	public PlayerModel _player;
+	public String uploadedon;
+	public String updatededon;
+	public StatuModel _statu;
+	public String description;
+	public String uploadedby;
+	public String id;
+	public String updatedon;
+	public int commentCount;
 	public ThumbnailModel _thumbnail;
+	public AcceModel _acce;
 
-	public ReplModel(ArrayList<String> tags, String uploadedby, String title, String updatededon, String description, String id, AcceModel acce, String uploadedon, int commentCount, StatuModel statu, ContentModel content, String updatedon, PlayerModel player, ThumbnailModel thumbnail) {
+	public ReplModel(ArrayList<String> tags, ContentModel content, String title, PlayerModel player, String uploadedon, String updatededon, StatuModel statu, String description, String uploadedby, String id, String updatedon, int commentCount, ThumbnailModel thumbnail, AcceModel acce) {
 
 		this.tags = tags;
-		this.uploadedby = uploadedby;
-		this.title = title;
-		this.updatededon = updatededon;
-		this.description = description;
-		this.id = id;
-		this._acce = acce;
-		this.uploadedon = uploadedon;
-		this.commentCount = commentCount;
-		this._statu = statu;
 		this._content = content;
-		this.updatedon = updatedon;
+		this.title = title;
 		this._player = player;
+		this.uploadedon = uploadedon;
+		this.updatededon = updatededon;
+		this._statu = statu;
+		this.description = description;
+		this.uploadedby = uploadedby;
+		this.id = id;
+		this.updatedon = updatedon;
+		this.commentCount = commentCount;
 		this._thumbnail = thumbnail;
+		this._acce = acce;
 
 	}
 
