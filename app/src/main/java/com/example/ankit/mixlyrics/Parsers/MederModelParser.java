@@ -4,8 +4,8 @@ import org.json.JSONObject;
 class MederModelParser {
 
 		TagerModelParser tager_parser = new TagerModelParser();
-		PricemModelParser pricem_parser = new PricemModelParser();
 		DesModelParser des_parser = new DesModelParser();
+		PricemModelParser pricem_parser = new PricemModelParser();
 		FoltModelParser folt_parser = new FoltModelParser();
 
 		public MederModelParser() {
@@ -19,13 +19,13 @@ class MederModelParser {
 
 					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
-					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
-
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
+
+					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
 
 					FoltModel folt = folt_parser.parseFoltModel(jsobj.getJSONObject("folt").toString());
 
-					local_model = new MederModel(tager, pricem, des, folt, );
+					local_model = new MederModel(tager, des, pricem, folt, );
  			} 
 			catch (JSONException e){
 
