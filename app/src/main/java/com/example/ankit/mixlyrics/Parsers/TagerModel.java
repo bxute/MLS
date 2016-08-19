@@ -1,13 +1,13 @@
 
 class TagerModel {
 
-	public String type;
 	public ItemsModel _items;
+	public String type;
 
-	public TagerModel(String type, ItemsModel items) {
+	public TagerModel(ItemsModel items, String type) {
 
-		this.type = type;
 		this._items = items;
+		this.type = type;
 
 	}
 

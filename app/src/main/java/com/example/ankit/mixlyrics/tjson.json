@@ -13,6 +13,19 @@
                         "type":"number",
                         "description":"Product identifier",
                         "required":true,
+                        "fest":
+                {
+                        "description":"Name of the product",
+                        "type":"string",
+                        "required":true,
+                        "type":"number",
+                        "description":"Product identifier",
+                        "required":true,
+                        "id":"hYB0mn5zh2c",
+                         "uploadedon":"2007-06-05T22:07:03.000Z",
+                         "updatedon":"2010-01-07T13:26:50.000Z",
+                         "uploadedby":"GoogleDeveloperDay"
+                },
                         "id":"hYB0mn5zh2c",
                          "uploadedon":"2007-06-05T22:07:03.000Z",
                          "updatedon":"2010-01-07T13:26:50.000Z",
