@@ -1,17 +1,17 @@
 
 class RootModel {
 
-	public String name;
-	public WricModel _wric;
+	public String naste;
 	public String apiVersion;
-	public PropertiesModel _properties;
+	public ProsModel _pros;
+	public WricModel _wric;
 
-	public RootModel(String name, WricModel wric, String apiVersion, PropertiesModel properties) {
+	public RootModel(String naste, String apiVersion, ProsModel pros, WricModel wric) {
 
-		this.name = name;
-		this._wric = wric;
+		this.naste = naste;
 		this.apiVersion = apiVersion;
-		this._properties = properties;
+		this._pros = pros;
+		this._wric = wric;
 
 	}
 

@@ -3,8 +3,8 @@ import org.json.JSONObject;
 
 class RootModelParser {
 
+		ProsModelParser pros_parser = new ProsModelParser();
 		WricModelParser wric_parser = new WricModelParser();
-		PropertiesModelParser properties_parser = new PropertiesModelParser();
 
 		public RootModelParser() {
 		}
@@ -15,11 +15,11 @@ class RootModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
+					ProsModel pros = pros_parser.parseProsModel(jsobj.getJSONObject("pros").toString());
+
 					WricModel wric = wric_parser.parseWricModel(jsobj.getJSONObject("wric").toString());
 
-					PropertiesModel properties = properties_parser.parsePropertiesModel(jsobj.getJSONObject("properties").toString());
-
-					local_model = new RootModel(jsobj.getString("name") , wric, jsobj.getString("apiVersion") , properties, );
+					local_model = new RootModel(jsobj.getString("naste") , jsobj.getString("apiVersion") , pros, wric, );
  			} 
 			catch (JSONException e){
 
