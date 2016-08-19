@@ -6,8 +6,8 @@ import org.json.JSONArray;
 class ExsodeModelParser {
 
 		ThetaModelParser theta_parser = new ThetaModelParser();
-		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
 		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
+		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
 		StatuModelParser statu_parser = new StatuModelParser();
 
 		public ExsodeModelParser() {
@@ -21,11 +21,7 @@ class ExsodeModelParser {
 
 					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
 
-					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
-
-					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
-
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString()); 
+					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString()); 
 
 					ArrayList<String> tags = new ArrayList<>();
 					JSONArray tags_arr = jsobj.getJSONArray("tags");
@@ -36,7 +32,11 @@ class ExsodeModelParser {
 
 					}
 
-					local_model = new ExsodeModel(jsobj.getString("uploadedby") , theta, jsobj.getInt("commentCount") , jsobj.getString("description") , arePIseeds, contestNo, jsobj.getString("title") , jsobj.getString("id") , jsobj.getString("updatedon") , jsobj.getString("updatededon") , statu, jsobj.getString("uploadedon") , tags);
+					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
+
+					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
+
+					local_model = new ExsodeModel(jsobj.getString("title") , jsobj.getString("updatedon") , theta, jsobj.getString("uploadedon") , jsobj.getString("id") , contestNo, tagsarePIseeds, jsobj.getString("updatededon") , jsobj.getString("description") , jsobj.getString("uploadedby") , jsobj.getInt("commentCount") , statu, );
  			} 
 			catch (JSONException e){
 

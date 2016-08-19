@@ -1,25 +1,25 @@
 
 class ArePIseedsModel {
 
-	public String value;
-	public String comment;
+	public String reason;
 	public String aspectRatio;
+	public ContentModel _content;
 	public String videoRespond;
 	public int duration;
-	public String reason;
-	public ContentModel _content;
 	public String list;
+	public String comment;
+	public String value;
 
-	public ArePIseedsModel(String value, String comment, String aspectRatio, String videoRespond, int duration, String reason, ContentModel content, String list) {
+	public ArePIseedsModel(String reason, String aspectRatio, ContentModel content, String videoRespond, int duration, String list, String comment, String value) {
 
-		this.value = value;
-		this.comment = comment;
+		this.reason = reason;
 		this.aspectRatio = aspectRatio;
+		this._content = content;
 		this.videoRespond = videoRespond;
 		this.duration = duration;
-		this.reason = reason;
-		this._content = content;
 		this.list = list;
+		this.comment = comment;
+		this.value = value;
 
 	}
 

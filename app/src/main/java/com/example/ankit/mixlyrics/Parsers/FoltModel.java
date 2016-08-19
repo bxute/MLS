@@ -1,15 +1,17 @@
 
 class FoltModel {
 
+	public Boolean required;
 	public String type;
 	public String description;
-	public Boolean required;
+	public DesModel _des;
 
-	public FoltModel(String type, String description, Boolean required) {
+	public FoltModel(Boolean required, String type, String description, DesModel des) {
 
+		this.required = required;
 		this.type = type;
 		this.description = description;
-		this.required = required;
+		this._des = des;
 
 	}
 

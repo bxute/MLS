@@ -16,7 +16,7 @@ class ArePIseedsModelParser {
 
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
 
-					local_model = new ArePIseedsModel(jsobj.getString("value") , jsobj.getString("comment") , jsobj.getString("aspectRatio") , jsobj.getString("videoRespond") , jsobj.getInt("duration") , jsobj.getString("reason") , content, jsobj.getString("list") , );
+					local_model = new ArePIseedsModel(jsobj.getString("reason") , jsobj.getString("aspectRatio") , content, jsobj.getString("videoRespond") , jsobj.getInt("duration") , jsobj.getString("list") , jsobj.getString("comment") , jsobj.getString("value") , );
  			} 
 			catch (JSONException e){
 
