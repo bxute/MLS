@@ -14,16 +14,19 @@
                         "description":"Product identifier",
                         "required":true
                 },
-                "folt":
+                "ferns":
                 {
                         "description":"Name of the product",
                         "type":"string",
                         "required":true,
                         "des":
                 {
-                    "content":{
+                    "comp":{
                                 "1":"rtsp://v5.cache3.c.youtube.com/CiILENy.../0/0/0/video.3gp",
                                 "5":"http://www.youtube.com/v/hYB0mn5zh2c?f...",
+                                "description":"Name of the product",
+                        "type":"string",
+                        "required":true,
                                 "6":"rtsp://v1.cache1.c.youtube.com/CiILENy.../0/0/0/video.3gp"
                              },
 
@@ -88,7 +91,7 @@
             "value":"restricted",
             "reason":"limitedSyndication"
          },
-         "arePIseeds":{
+         "adees":{
             "duration":2840,
             "list":"allowed",
             "content":{
