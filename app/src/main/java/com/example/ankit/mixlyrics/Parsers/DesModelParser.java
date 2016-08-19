@@ -13,7 +13,7 @@ class DesModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new DesModel(jsobj.getString("description") , jsobj.getBoolean("required") , jsobj.getString("type") , );
+					local_model = new DesModel(jsobj.getInt("favoriteCount") , jsobj.getString("commentVote") , jsobj.getString("syndicate") , jsobj.getInt("ratingCount") , jsobj.getBoolean("required") , jsobj.getString("list") , jsobj.getString("description") , jsobj.getInt("viewCount") , jsobj.getString("rate") , jsobj.getString("comment") , jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

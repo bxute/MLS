@@ -2,37 +2,37 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public ContentModel _content;
-	public String uploadedby;
-	public ThumbnailModel _thumbnail;
-	public String title;
-	public String description;
-	public PlayerModel _player;
-	public String id;
-	public AccesspiModel _accesspi;
-	public ArrayList<String> tags;
-	public String updatedon;
 	public String updatededon;
+	public String updatedon;
+	public String id;
+	public String description;
+	public ArrayList<String> tags;
+	public String title;
+	public PlayerModel _player;
+	public String uploadedby;
 	public String uploadedon;
-	public StatuModel _statu;
 	public int commentCount;
+	public ContentModel _content;
+	public StatuModel _statu;
+	public ThumbnailModel _thumbnail;
+	public AccesspiModel _accesspi;
 
-	public ExsodeModel(ContentModel content, String uploadedby, ThumbnailModel thumbnail, String title, String description, PlayerModel player, String id, AccesspiModel accesspi, ArrayList<String> tags, String updatedon, String updatededon, String uploadedon, StatuModel statu, int commentCount) {
+	public ExsodeModel(String updatededon, String updatedon, String id, String description, ArrayList<String> tags, String title, PlayerModel player, String uploadedby, String uploadedon, int commentCount, ContentModel content, StatuModel statu, ThumbnailModel thumbnail, AccesspiModel accesspi) {
 
-		this._content = content;
-		this.uploadedby = uploadedby;
-		this._thumbnail = thumbnail;
-		this.title = title;
-		this.description = description;
-		this._player = player;
-		this.id = id;
-		this._accesspi = accesspi;
-		this.tags = tags;
-		this.updatedon = updatedon;
 		this.updatededon = updatededon;
+		this.updatedon = updatedon;
+		this.id = id;
+		this.description = description;
+		this.tags = tags;
+		this.title = title;
+		this._player = player;
+		this.uploadedby = uploadedby;
 		this.uploadedon = uploadedon;
-		this._statu = statu;
 		this.commentCount = commentCount;
+		this._content = content;
+		this._statu = statu;
+		this._thumbnail = thumbnail;
+		this._accesspi = accesspi;
 
 	}
 

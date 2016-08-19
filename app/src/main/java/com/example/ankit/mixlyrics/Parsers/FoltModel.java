@@ -1,14 +1,14 @@
 
 class FoltModel {
 
-	public String description;
 	public Boolean required;
+	public String description;
 	public String type;
 
-	public FoltModel(String description, Boolean required, String type) {
+	public FoltModel(Boolean required, String description, String type) {
 
-		this.description = description;
 		this.required = required;
+		this.description = description;
 		this.type = type;
 
 	}

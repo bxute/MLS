@@ -5,11 +5,11 @@ import org.json.JSONArray;
 
 class ExsodeModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
-		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
 		PlayerModelParser player_parser = new PlayerModelParser();
-		AccesspiModelParser accesspi_parser = new AccesspiModelParser();
+		ContentModelParser content_parser = new ContentModelParser();
 		StatuModelParser statu_parser = new StatuModelParser();
+		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
+		AccesspiModelParser accesspi_parser = new AccesspiModelParser();
 
 		public ExsodeModelParser() {
 		}
@@ -18,15 +18,7 @@ class ExsodeModelParser {
 
 			ExsodeModel local_model = null;
 			try {
-					JSONObject jsobj = new JSONObject(json_object);
-
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
-
-					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
-
-					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
-
-					AccesspiModel accesspi = accesspi_parser.parseAccesspiModel(jsobj.getJSONObject("accesspi").toString()); 
+					JSONObject jsobj = new JSONObject(json_object); 
 
 					ArrayList<String> tags = new ArrayList<>();
 					JSONArray tags_arr = jsobj.getJSONArray("tags");
@@ -37,9 +29,17 @@ class ExsodeModelParser {
 
 					}
 
+					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
+
+					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+
 					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
 
-					local_model = new ExsodeModel(content, jsobj.getString("uploadedby") , thumbnail, jsobj.getString("title") , jsobj.getString("description") , player, jsobj.getString("id") , accesspi, tagsjsobj.getString("updatedon") , jsobj.getString("updatededon") , jsobj.getString("uploadedon") , statu, jsobj.getInt("commentCount") , );
+					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
+
+					AccesspiModel accesspi = accesspi_parser.parseAccesspiModel(jsobj.getJSONObject("accesspi").toString());
+
+					local_model = new ExsodeModel(jsobj.getString("updatededon") , jsobj.getString("updatedon") , jsobj.getString("id") , jsobj.getString("description") , tagsjsobj.getString("title") , player, jsobj.getString("uploadedby") , jsobj.getString("uploadedon") , jsobj.getInt("commentCount") , content, statu, thumbnail, accesspi, );
  			} 
 			catch (JSONException e){
 
