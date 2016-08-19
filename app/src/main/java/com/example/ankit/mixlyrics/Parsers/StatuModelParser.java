@@ -16,7 +16,7 @@ class StatuModelParser {
 
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
 
-					local_model = new StatuModel(jsobj.getString("comment") , content, jsobj.getString("list") , jsobj.getString("reason") , jsobj.getString("value") , jsobj.getInt("duration") , );
+					local_model = new StatuModel(jsobj.getInt("duration") , jsobj.getString("value") , jsobj.getString("comment") , jsobj.getString("list") , jsobj.getString("reason") , content, );
  			} 
 			catch (JSONException e){
 

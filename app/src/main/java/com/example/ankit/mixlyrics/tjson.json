@@ -9,7 +9,7 @@
                                 "5":"http://www.youtube.com/v/hYB0mn5zh2c?f...",
                                 "6":"rtsp://v1.cache1.c.youtube.com/CiILENy.../0/0/0/video.3gp"
                              },
-                                        
+
                         "type":"number",                            
                         "description":"Product identifier",
                         "required":true
@@ -77,6 +77,16 @@
             "reason":"limitedSyndication"
          },
          "accesspi":{
+            "duration":2840,
+            "list":"allowed",
+            "content":{
+            "1":"rtsp://v5.cache3.c.youtube.com/CiILENy.../0/0/0/video.3gp",
+            "5":"http://www.youtube.com/v/hYB0mn5zh2c?f...",
+            "6":"rtsp://v1.cache1.c.youtube.com/CiILENy.../0/0/0/video.3gp"
+         },
+            "comment":"allowed",
+            "value":"restricted",
+            "reason":"limitedSyndication",
           "aspectRatio":"widescreen",
             "videoRespond":"moderated"
          }
