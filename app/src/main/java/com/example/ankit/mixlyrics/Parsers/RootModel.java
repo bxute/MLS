@@ -1,27 +1,27 @@
 
 class RootModel {
 
-	public AccurseModel _accurse;
-	public String uploadedby;
-	public String id;
 	public String updatedon;
-	public String apiVersion;
-	public WricModel _wric;
-	public String updatededon;
-	public String uploadedon;
+	public String uploadedby;
 	public String naste;
+	public String apiVersion;
+	public ProsModel _pros;
+	public String updatededon;
+	public WricModel _wric;
+	public String id;
+	public String uploadedon;
 
-	public RootModel(AccurseModel accurse, String uploadedby, String id, String updatedon, String apiVersion, WricModel wric, String updatededon, String uploadedon, String naste) {
+	public RootModel(String updatedon, String uploadedby, String naste, String apiVersion, ProsModel pros, String updatededon, WricModel wric, String id, String uploadedon) {
 
-		this._accurse = accurse;
-		this.uploadedby = uploadedby;
-		this.id = id;
 		this.updatedon = updatedon;
-		this.apiVersion = apiVersion;
-		this._wric = wric;
-		this.updatededon = updatededon;
-		this.uploadedon = uploadedon;
+		this.uploadedby = uploadedby;
 		this.naste = naste;
+		this.apiVersion = apiVersion;
+		this._pros = pros;
+		this.updatededon = updatededon;
+		this._wric = wric;
+		this.id = id;
+		this.uploadedon = uploadedon;
 
 	}
 

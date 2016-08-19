@@ -3,7 +3,7 @@ import org.json.JSONObject;
 
 class RootModelParser {
 
-		AccurseModelParser accurse_parser = new AccurseModelParser();
+		ProsModelParser pros_parser = new ProsModelParser();
 		WricModelParser wric_parser = new WricModelParser();
 
 		public RootModelParser() {
@@ -15,11 +15,11 @@ class RootModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					AccurseModel accurse = accurse_parser.parseAccurseModel(jsobj.getJSONObject("accurse").toString());
+					ProsModel pros = pros_parser.parseProsModel(jsobj.getJSONObject("pros").toString());
 
 					WricModel wric = wric_parser.parseWricModel(jsobj.getJSONObject("wric").toString());
 
-					local_model = new RootModel(accurse, jsobj.getString("uploadedby") , jsobj.getString("id") , jsobj.getString("updatedon") , jsobj.getString("apiVersion") , wric, jsobj.getString("updatededon") , jsobj.getString("uploadedon") , jsobj.getString("naste") , );
+					local_model = new RootModel(jsobj.getString("updatedon") , jsobj.getString("uploadedby") , jsobj.getString("naste") , jsobj.getString("apiVersion") , pros, jsobj.getString("updatededon") , wric, jsobj.getString("id") , jsobj.getString("uploadedon") , );
  			} 
 			catch (JSONException e){
 
