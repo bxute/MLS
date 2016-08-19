@@ -19,7 +19,7 @@ class RootModelParser {
 
 					WricModel wric = wric_parser.parseWricModel(jsobj.getJSONObject("wric").toString());
 
-					local_model = new RootModel(jsobj.getString("naste") , jsobj.getString("apiVersion") , pros, wric, );
+					local_model = new RootModel(jsobj.getString("updatedon") , jsobj.getString("uploadedby") , jsobj.getString("naste") , jsobj.getString("apiVersion") , pros, jsobj.getString("updatededon") , wric, jsobj.getString("id") , jsobj.getString("uploadedon") , );
  			} 
 			catch (JSONException e){
 
