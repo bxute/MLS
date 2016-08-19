@@ -1,52 +1,20 @@
 {
-        "naste":"Product",
-        "id":"hYB0mn5zh2c",
-         "uploadedon":"2007-06-05T22:07:03.000Z",
-         "updatedon":"2010-01-07T13:26:50.000Z",
-         "uploadedby":"GoogleDeveloperDay",
-         "updatededon":"2010-01-07T19:58:42.949Z",
-         
-        "accurse":
+        "name":"Product",
+        "properties":
         {
                 "des":
                 {
                         "type":"number",
                         "description":"Product identifier",
-                        "required":true,
-                        "fest":
+                        "required":true
+                },
+                "folt":
                 {
                         "description":"Name of the product",
                         "type":"string",
-                        "required":true,
-                        "type":"number",
-                        "description":"Product identifier",
-                        "required":true,
-                        "id":"hYB0mn5zh2c",
-                         "uploadedon":"2007-06-05T22:07:03.000Z",
-                         "updatedon":"2010-01-07T13:26:50.000Z",
-                         "uploadedby":"GoogleDeveloperDay"
+                        "required":true
                 },
-                        "id":"hYB0mn5zh2c",
-                         "uploadedon":"2007-06-05T22:07:03.000Z",
-                         "updatedon":"2010-01-07T13:26:50.000Z",
-                         "uploadedby":"GoogleDeveloperDay",
-                         "updatededon":"2010-01-07T19:58:42.949Z"
-         
-                },
-                "fest":
-                {
-                        "description":"Name of the product",
-                        "type":"string",
-                        "required":true,
-                        "type":"number",
-                        "description":"Product identifier",
-                        "required":true,
-                        "id":"hYB0mn5zh2c",
-                         "uploadedon":"2007-06-05T22:07:03.000Z",
-                         "updatedon":"2010-01-07T13:26:50.000Z",
-                         "uploadedby":"GoogleDeveloperDay"
-                },
-                "priceme":
+                "pricem":
                 {
                         "type":"number",
                         "minimum":0,
@@ -65,7 +33,7 @@
  "wric":{
     "updated":"2010-01-07T19:58:42.949Z",
     "itemsPerPage":1,
-    "repl":[
+    "exsode":[
         {"id":"hYB0mn5zh2c",
          "uploadedon":"2007-06-05T22:07:03.000Z",
          "updatedon":"2010-01-07T13:26:50.000Z",
@@ -105,17 +73,8 @@
             "value":"restricted",
             "reason":"limitedSyndication"
          },
-         "acce":{
+         "accesspi":{
           "aspectRatio":"widescreen",
-         "rating":4.63,
-         "ratingCount":68,
-         "viewCount":220101,
-         "favoriteCount":201,
-            "syndicate":"allowed",
-            "commentVote":"allowed",
-            "rate":"allowed",
-            "list":"allowed",
-         "aspectRatio":"widescreen",
          "rating":4.63,
          "ratingCount":68,
          "viewCount":220101,

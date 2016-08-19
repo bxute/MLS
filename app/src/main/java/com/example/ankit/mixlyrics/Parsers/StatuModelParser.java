@@ -13,7 +13,7 @@ class StatuModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new StatuModel(jsobj.getString("comment") , jsobj.getString("aspectRatio") , jsobj.getInt("duration") , jsobj.getString("syndicate") , jsobj.getString("list") , jsobj.getString("rate") , jsobj.getString("reason") , jsobj.getString("commentVote") , jsobj.getString("value") , jsobj.getInt("ratingCount") , jsobj.getInt("viewCount") , jsobj.getInt("favoriteCount") , );
+					local_model = new StatuModel(jsobj.getString("list") , jsobj.getString("rate") , jsobj.getInt("duration") , jsobj.getInt("favoriteCount") , jsobj.getString("syndicate") , jsobj.getInt("viewCount") , jsobj.getString("reason") , jsobj.getString("aspectRatio") , jsobj.getInt("ratingCount") , jsobj.getString("commentVote") , jsobj.getString("comment") , jsobj.getString("value") , );
  			} 
 			catch (JSONException e){
 

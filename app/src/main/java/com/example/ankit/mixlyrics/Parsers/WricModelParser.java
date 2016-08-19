@@ -5,10 +5,10 @@ import org.json.JSONArray;
 
 class WricModelParser {
 
-		ReplModelParser repl_parser;
+		ExsodeModelParser exsode_parser;
 
 		public WricModelParser() {
-			repl_parser = new ReplModelParser();
+			exsode_parser = new ExsodeModelParser();
 		}
 
 		public WricModel parseWricModel(String json_object) {
@@ -17,16 +17,16 @@ class WricModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ArrayList<ReplModel> repls = new ArrayList<>();
-					JSONArray repl_arr = jsobj.getJSONArray("repl");
+					ArrayList<ExsodeModel> exsodes = new ArrayList<>();
+					JSONArray exsode_arr = jsobj.getJSONArray("exsode");
 			
-					for(int i = 0 ;i<repl_arr.length();i++){
+					for(int i = 0 ;i<exsode_arr.length();i++){
 
- 						repls.add(repl_parser.parseReplModel((String)repl_arr.get(i)));
+ 						exsodes.add(exsode_parser.parseExsodeModel((String)exsode_arr.get(i)));
 
 					}
 
-					local_model = new WricModel(jsobj.getString("updated") , repls, jsobj.getInt("itemsPerPage") , );
+					local_model = new WricModel(jsobj.getInt("itemsPerPage") , jsobj.getString("updated") , exsodes, );
  			} 
 			catch (JSONException e){
 

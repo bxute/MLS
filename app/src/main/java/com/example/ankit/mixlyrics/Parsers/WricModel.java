@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 class WricModel {
 
-	public String updated;
-	public ArrayList<ReplModel> repl;
 	public int itemsPerPage;
+	public String updated;
+	public ArrayList<ExsodeModel> exsode;
 
-	public WricModel(String updated, ArrayList<ReplModel> repl, int itemsPerPage) {
+	public WricModel(int itemsPerPage, String updated, ArrayList<ExsodeModel> exsode) {
 
-		this.updated = updated;
-		this.repl = repl;
 		this.itemsPerPage = itemsPerPage;
+		this.updated = updated;
+		this.exsode = exsode;
 
 	}
 
