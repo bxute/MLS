@@ -2,37 +2,37 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public int commentCount;
 	public ContentModel _content;
-	public String title;
-	public String uploadedon;
-	public String updatededon;
-	public String id;
-	public String description;
-	public AccesspiModel _accesspi;
 	public String uploadedby;
-	public StatuModel _statu;
+	public ThumbnailModel _thumbnail;
+	public String title;
+	public String description;
 	public PlayerModel _player;
+	public String id;
+	public AccesspiModel _accesspi;
 	public ArrayList<String> tags;
 	public String updatedon;
-	public ThumbnailModel _thumbnail;
+	public String updatededon;
+	public String uploadedon;
+	public StatuModel _statu;
+	public int commentCount;
 
-	public ExsodeModel(int commentCount, ContentModel content, String title, String uploadedon, String updatededon, String id, String description, AccesspiModel accesspi, String uploadedby, StatuModel statu, PlayerModel player, ArrayList<String> tags, String updatedon, ThumbnailModel thumbnail) {
+	public ExsodeModel(ContentModel content, String uploadedby, ThumbnailModel thumbnail, String title, String description, PlayerModel player, String id, AccesspiModel accesspi, ArrayList<String> tags, String updatedon, String updatededon, String uploadedon, StatuModel statu, int commentCount) {
 
-		this.commentCount = commentCount;
 		this._content = content;
-		this.title = title;
-		this.uploadedon = uploadedon;
-		this.updatededon = updatededon;
-		this.id = id;
-		this.description = description;
-		this._accesspi = accesspi;
 		this.uploadedby = uploadedby;
-		this._statu = statu;
+		this._thumbnail = thumbnail;
+		this.title = title;
+		this.description = description;
 		this._player = player;
+		this.id = id;
+		this._accesspi = accesspi;
 		this.tags = tags;
 		this.updatedon = updatedon;
-		this._thumbnail = thumbnail;
+		this.updatededon = updatededon;
+		this.uploadedon = uploadedon;
+		this._statu = statu;
+		this.commentCount = commentCount;
 
 	}
 
