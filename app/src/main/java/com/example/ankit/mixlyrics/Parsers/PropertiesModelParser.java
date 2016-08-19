@@ -3,10 +3,10 @@ import org.json.JSONObject;
 
 class PropertiesModelParser {
 
+		PricemModelParser pricem_parser = new PricemModelParser();
 		TagerModelParser tager_parser = new TagerModelParser();
 		DesModelParser des_parser = new DesModelParser();
 		FoltModelParser folt_parser = new FoltModelParser();
-		PricemModelParser pricem_parser = new PricemModelParser();
 
 		public PropertiesModelParser() {
 		}
@@ -17,15 +17,15 @@ class PropertiesModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
+					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
+
 					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
 					FoltModel folt = folt_parser.parseFoltModel(jsobj.getJSONObject("folt").toString());
 
-					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
-
-					local_model = new PropertiesModel(tager, des, folt, pricem, );
+					local_model = new PropertiesModel(pricem, tager, des, folt, );
  			} 
 			catch (JSONException e){
 

@@ -1,33 +1,33 @@
 
 class StatuModel {
 
-	public String list;
-	public String rate;
 	public int duration;
-	public int favoriteCount;
-	public String syndicate;
+	public String list;
 	public int viewCount;
-	public String reason;
 	public String aspectRatio;
-	public int ratingCount;
+	public int favoriteCount;
 	public String commentVote;
-	public String comment;
+	public String syndicate;
+	public int ratingCount;
 	public String value;
+	public String rate;
+	public String reason;
+	public String comment;
 
-	public StatuModel(String list, String rate, int duration, int favoriteCount, String syndicate, int viewCount, String reason, String aspectRatio, int ratingCount, String commentVote, String comment, String value) {
+	public StatuModel(int duration, String list, int viewCount, String aspectRatio, int favoriteCount, String commentVote, String syndicate, int ratingCount, String value, String rate, String reason, String comment) {
 
-		this.list = list;
-		this.rate = rate;
 		this.duration = duration;
-		this.favoriteCount = favoriteCount;
-		this.syndicate = syndicate;
+		this.list = list;
 		this.viewCount = viewCount;
-		this.reason = reason;
 		this.aspectRatio = aspectRatio;
-		this.ratingCount = ratingCount;
+		this.favoriteCount = favoriteCount;
 		this.commentVote = commentVote;
-		this.comment = comment;
+		this.syndicate = syndicate;
+		this.ratingCount = ratingCount;
 		this.value = value;
+		this.rate = rate;
+		this.reason = reason;
+		this.comment = comment;
 
 	}
 

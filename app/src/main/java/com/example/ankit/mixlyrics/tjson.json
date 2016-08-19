@@ -5,6 +5,16 @@
                 "des":
                 {
                         "type":"number",
+                         "rating":4.63,
+                         "ratingCount":68,
+                         "viewCount":220101,
+                         "favoriteCount":201,
+                            "syndicate":"allowed",
+                            "commentVote":"allowed",
+                            "rate":"allowed",
+                            "list":"allowed",
+                            "comment":"allowed",
+                            
                         "description":"Product identifier",
                         "required":true
                 },
@@ -75,16 +85,6 @@
          },
          "accesspi":{
           "aspectRatio":"widescreen",
-         "rating":4.63,
-         "ratingCount":68,
-         "viewCount":220101,
-         "favoriteCount":201,
-            "syndicate":"allowed",
-            "commentVote":"allowed",
-            "rate":"allowed",
-            "list":"allowed",
-            "comment":"allowed",
-            "embed":"allowed",
             "videoRespond":"moderated"
          }
         }
