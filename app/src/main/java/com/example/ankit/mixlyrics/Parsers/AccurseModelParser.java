@@ -3,10 +3,10 @@ import org.json.JSONObject;
 
 class AccurseModelParser {
 
-		PricemeModelParser priceme_parser = new PricemeModelParser();
+		DesModelParser des_parser = new DesModelParser();
 		TagerModelParser tager_parser = new TagerModelParser();
 		FestModelParser fest_parser = new FestModelParser();
-		DesModelParser des_parser = new DesModelParser();
+		PricemeModelParser priceme_parser = new PricemeModelParser();
 
 		public AccurseModelParser() {
 		}
@@ -17,15 +17,15 @@ class AccurseModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					PricemeModel priceme = priceme_parser.parsePricemeModel(jsobj.getJSONObject("priceme").toString());
+					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
 					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
 					FestModel fest = fest_parser.parseFestModel(jsobj.getJSONObject("fest").toString());
 
-					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
+					PricemeModel priceme = priceme_parser.parsePricemeModel(jsobj.getJSONObject("priceme").toString());
 
-					local_model = new AccurseModel(priceme, tager, fest, des, );
+					local_model = new AccurseModel(des, tager, fest, priceme, );
  			} 
 			catch (JSONException e){
 

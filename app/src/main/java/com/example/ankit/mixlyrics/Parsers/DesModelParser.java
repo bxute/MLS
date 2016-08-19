@@ -3,6 +3,7 @@ import org.json.JSONObject;
 
 class DesModelParser {
 
+		FestModelParser fest_parser = new FestModelParser();
 
 		public DesModelParser() {
 		}
@@ -13,7 +14,9 @@ class DesModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new DesModel(jsobj.getString("description") , jsobj.getString("uploadedby") , jsobj.getString("id") , jsobj.getString("uploadedon") , jsobj.getString("type") , jsobj.getString("updatedon") , jsobj.getString("updatededon") , jsobj.getBoolean("required") , );
+					FestModel fest = fest_parser.parseFestModel(jsobj.getJSONObject("fest").toString());
+
+					local_model = new DesModel(jsobj.getString("uploadedby") , jsobj.getString("updatedon") , jsobj.getString("type") , jsobj.getString("uploadedon") , jsobj.getString("id") , jsobj.getString("updatededon") , jsobj.getBoolean("required") , jsobj.getString("description") , fest, );
  			} 
 			catch (JSONException e){
 

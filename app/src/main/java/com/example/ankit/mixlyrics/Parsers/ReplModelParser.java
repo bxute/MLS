@@ -6,10 +6,10 @@ import org.json.JSONArray;
 class ReplModelParser {
 
 		AcceModelParser acce_parser = new AcceModelParser();
-		StatuModelParser statu_parser = new StatuModelParser();
-		ContentModelParser content_parser = new ContentModelParser();
 		PlayerModelParser player_parser = new PlayerModelParser();
+		ContentModelParser content_parser = new ContentModelParser();
 		ThumbnailModelParser thumbnail_parser = new ThumbnailModelParser();
+		StatuModelParser statu_parser = new StatuModelParser();
 
 		public ReplModelParser() {
 		}
@@ -31,15 +31,15 @@ class ReplModelParser {
 
 					AcceModel acce = acce_parser.parseAcceModel(jsobj.getJSONObject("acce").toString());
 
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
+					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
 
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
 
-					PlayerModel player = player_parser.parsePlayerModel(jsobj.getJSONObject("player").toString());
-
 					ThumbnailModel thumbnail = thumbnail_parser.parseThumbnailModel(jsobj.getJSONObject("thumbnail").toString());
 
-					local_model = new ReplModel(tagsjsobj.getString("uploadedby") , jsobj.getString("title") , jsobj.getString("updatededon") , jsobj.getString("description") , jsobj.getString("id") , acce, jsobj.getString("uploadedon") , jsobj.getInt("commentCount") , statu, content, jsobj.getString("updatedon") , player, thumbnail, );
+					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
+
+					local_model = new ReplModel(tagsjsobj.getString("updatedon") , jsobj.getString("uploadedon") , jsobj.getString("updatededon") , jsobj.getString("description") , acce, player, jsobj.getString("uploadedby") , content, thumbnail, statu, jsobj.getString("id") , jsobj.getInt("commentCount") , jsobj.getString("title") , );
  			} 
 			catch (JSONException e){
 

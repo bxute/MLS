@@ -13,7 +13,7 @@ class FestModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new FestModel(jsobj.getString("description") , jsobj.getString("uploadedby") , jsobj.getString("id") , jsobj.getString("uploadedon") , jsobj.getString("type") , jsobj.getString("updatedon") , jsobj.getBoolean("required") , );
+					local_model = new FestModel(jsobj.getString("uploadedby") , jsobj.getString("updatedon") , jsobj.getString("type") , jsobj.getString("uploadedon") , jsobj.getString("id") , jsobj.getBoolean("required") , jsobj.getString("description") , );
  			} 
 			catch (JSONException e){
 

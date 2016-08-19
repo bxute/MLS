@@ -1,23 +1,23 @@
 
 class FestModel {
 
-	public String description;
 	public String uploadedby;
-	public String id;
-	public String uploadedon;
-	public String type;
 	public String updatedon;
+	public String type;
+	public String uploadedon;
+	public String id;
 	public Boolean required;
+	public String description;
 
-	public FestModel(String description, String uploadedby, String id, String uploadedon, String type, String updatedon, Boolean required) {
+	public FestModel(String uploadedby, String updatedon, String type, String uploadedon, String id, Boolean required, String description) {
 
-		this.description = description;
 		this.uploadedby = uploadedby;
-		this.id = id;
-		this.uploadedon = uploadedon;
-		this.type = type;
 		this.updatedon = updatedon;
+		this.type = type;
+		this.uploadedon = uploadedon;
+		this.id = id;
 		this.required = required;
+		this.description = description;
 
 	}
 

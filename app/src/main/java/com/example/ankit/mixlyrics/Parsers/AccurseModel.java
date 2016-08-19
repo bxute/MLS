@@ -1,17 +1,17 @@
 
 class AccurseModel {
 
-	public PricemeModel _priceme;
+	public DesModel _des;
 	public TagerModel _tager;
 	public FestModel _fest;
-	public DesModel _des;
+	public PricemeModel _priceme;
 
-	public AccurseModel(PricemeModel priceme, TagerModel tager, FestModel fest, DesModel des) {
+	public AccurseModel(DesModel des, TagerModel tager, FestModel fest, PricemeModel priceme) {
 
-		this._priceme = priceme;
+		this._des = des;
 		this._tager = tager;
 		this._fest = fest;
-		this._des = des;
+		this._priceme = priceme;
 
 	}
 

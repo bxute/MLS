@@ -13,7 +13,7 @@ class PricemeModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new PricemeModel(jsobj.getString("type") , jsobj.getInt("minimum") , jsobj.getBoolean("required") , );
+					local_model = new PricemeModel(jsobj.getInt("minimum") , jsobj.getBoolean("required") , jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

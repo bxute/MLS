@@ -1,15 +1,15 @@
 
 class PricemeModel {
 
-	public String type;
 	public int minimum;
 	public Boolean required;
+	public String type;
 
-	public PricemeModel(String type, int minimum, Boolean required) {
+	public PricemeModel(int minimum, Boolean required, String type) {
 
-		this.type = type;
 		this.minimum = minimum;
 		this.required = required;
+		this.type = type;
 
 	}
 
