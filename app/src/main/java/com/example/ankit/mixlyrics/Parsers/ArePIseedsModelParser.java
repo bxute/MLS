@@ -3,7 +3,6 @@ import org.json.JSONObject;
 
 class ArePIseedsModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
 
 		public ArePIseedsModelParser() {
 		}
@@ -14,9 +13,7 @@ class ArePIseedsModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
-
-					local_model = new ArePIseedsModel(jsobj.getString("reason") , jsobj.getString("aspectRatio") , content, jsobj.getString("videoRespond") , jsobj.getInt("duration") , jsobj.getString("list") , jsobj.getString("comment") , jsobj.getString("value") , );
+					local_model = new ArePIseedsModel(jsobj.getString("default") , );
  			} 
 			catch (JSONException e){
 

@@ -2,35 +2,37 @@ import java.util.ArrayList;
 
 class ExsodeModel {
 
-	public String title;
 	public String updatedon;
-	public ThetaModel _theta;
-	public String uploadedon;
-	public String id;
-	public ContestNoModel _contestNo;
 	public ArrayList<String> tags;
-	public ArePIseedsModel _arePIseeds;
+	public AdeesModel _adees;
+	public String uploadedon;
+	public ContestNoModel _contestNo;
+	public String uploadedby;
 	public String updatededon;
 	public String description;
-	public String uploadedby;
-	public int commentCount;
+	public ArePIseedsModel _arePIseeds;
 	public StatuModel _statu;
+	public String title;
+	public ThetaModel _theta;
+	public String id;
+	public int commentCount;
 
-	public ExsodeModel(String title, String updatedon, ThetaModel theta, String uploadedon, String id, ContestNoModel contestNo, ArrayList<String> tags, ArePIseedsModel arePIseeds, String updatededon, String description, String uploadedby, int commentCount, StatuModel statu) {
+	public ExsodeModel(String updatedon, ArrayList<String> tags, AdeesModel adees, String uploadedon, ContestNoModel contestNo, String uploadedby, String updatededon, String description, ArePIseedsModel arePIseeds, StatuModel statu, String title, ThetaModel theta, String id, int commentCount) {
 
-		this.title = title;
 		this.updatedon = updatedon;
-		this._theta = theta;
-		this.uploadedon = uploadedon;
-		this.id = id;
-		this._contestNo = contestNo;
 		this.tags = tags;
-		this._arePIseeds = arePIseeds;
+		this._adees = adees;
+		this.uploadedon = uploadedon;
+		this._contestNo = contestNo;
+		this.uploadedby = uploadedby;
 		this.updatededon = updatededon;
 		this.description = description;
-		this.uploadedby = uploadedby;
-		this.commentCount = commentCount;
+		this._arePIseeds = arePIseeds;
 		this._statu = statu;
+		this.title = title;
+		this._theta = theta;
+		this.id = id;
+		this.commentCount = commentCount;
 
 	}
 

@@ -3,14 +3,14 @@ class DesModel {
 
 	public Boolean required;
 	public String type;
-	public ContentModel _content;
+	public CompModel _comp;
 	public String description;
 
-	public DesModel(Boolean required, String type, ContentModel content, String description) {
+	public DesModel(Boolean required, String type, CompModel comp, String description) {
 
 		this.required = required;
 		this.type = type;
-		this._content = content;
+		this._comp = comp;
 		this.description = description;
 
 	}

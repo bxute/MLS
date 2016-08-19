@@ -3,7 +3,7 @@ import org.json.JSONObject;
 
 class DesModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
+		CompModelParser comp_parser = new CompModelParser();
 
 		public DesModelParser() {
 		}
@@ -14,9 +14,9 @@ class DesModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+					CompModel comp = comp_parser.parseCompModel(jsobj.getJSONObject("comp").toString());
 
-					local_model = new DesModel(jsobj.getBoolean("required") , jsobj.getString("type") , content, jsobj.getString("description") , );
+					local_model = new DesModel(jsobj.getBoolean("required") , jsobj.getString("type") , comp, jsobj.getString("description") , );
  			} 
 			catch (JSONException e){
 

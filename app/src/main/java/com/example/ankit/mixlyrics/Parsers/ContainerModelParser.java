@@ -13,7 +13,7 @@ class ContainerModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new ContainerModel(jsobj.getString("6") , jsobj.getString("1") , jsobj.getString("5") , );
+					local_model = new ContainerModel(jsobj.getString("1") , jsobj.getString("6") , jsobj.getString("5") , );
  			} 
 			catch (JSONException e){
 
