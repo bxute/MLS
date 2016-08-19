@@ -3,10 +3,10 @@ import org.json.JSONObject;
 
 class ProsModelParser {
 
-		FoltModelParser folt_parser = new FoltModelParser();
 		DesModelParser des_parser = new DesModelParser();
 		PricemModelParser pricem_parser = new PricemModelParser();
 		TagerModelParser tager_parser = new TagerModelParser();
+		FoltModelParser folt_parser = new FoltModelParser();
 
 		public ProsModelParser() {
 		}
@@ -17,15 +17,15 @@ class ProsModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					FoltModel folt = folt_parser.parseFoltModel(jsobj.getJSONObject("folt").toString());
-
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
 					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
 
 					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
-					local_model = new ProsModel(folt, des, pricem, tager, );
+					FoltModel folt = folt_parser.parseFoltModel(jsobj.getJSONObject("folt").toString());
+
+					local_model = new ProsModel(des, pricem, tager, folt, );
  			} 
 			catch (JSONException e){
 

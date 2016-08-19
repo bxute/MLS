@@ -13,7 +13,7 @@ class AcceModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new AcceModel(jsobj.getString("videoRespond") , jsobj.getString("embed") , jsobj.getString("syndicate") , jsobj.getInt("favoriteCount") , jsobj.getString("commentVote") , jsobj.getInt("viewCount") , jsobj.getString("aspectRatio") , jsobj.getInt("ratingCount") , jsobj.getString("list") , jsobj.getString("comment") , jsobj.getString("rate") , );
+					local_model = new AcceModel(jsobj.getInt("favoriteCount") , jsobj.getString("comment") , jsobj.getString("syndicate") , jsobj.getString("commentVote") , jsobj.getString("list") , jsobj.getInt("ratingCount") , jsobj.getString("aspectRatio") , jsobj.getString("embed") , jsobj.getString("videoRespond") , jsobj.getString("rate") , jsobj.getInt("viewCount") , );
  			} 
 			catch (JSONException e){
 

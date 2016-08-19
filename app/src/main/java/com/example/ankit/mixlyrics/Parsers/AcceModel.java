@@ -1,31 +1,31 @@
 
 class AcceModel {
 
-	public String videoRespond;
-	public String embed;
-	public String syndicate;
 	public int favoriteCount;
-	public String commentVote;
-	public int viewCount;
-	public String aspectRatio;
-	public int ratingCount;
-	public String list;
 	public String comment;
+	public String syndicate;
+	public String commentVote;
+	public String list;
+	public int ratingCount;
+	public String aspectRatio;
+	public String embed;
+	public String videoRespond;
 	public String rate;
+	public int viewCount;
 
-	public AcceModel(String videoRespond, String embed, String syndicate, int favoriteCount, String commentVote, int viewCount, String aspectRatio, int ratingCount, String list, String comment, String rate) {
+	public AcceModel(int favoriteCount, String comment, String syndicate, String commentVote, String list, int ratingCount, String aspectRatio, String embed, String videoRespond, String rate, int viewCount) {
 
-		this.videoRespond = videoRespond;
-		this.embed = embed;
-		this.syndicate = syndicate;
 		this.favoriteCount = favoriteCount;
-		this.commentVote = commentVote;
-		this.viewCount = viewCount;
-		this.aspectRatio = aspectRatio;
-		this.ratingCount = ratingCount;
-		this.list = list;
 		this.comment = comment;
+		this.syndicate = syndicate;
+		this.commentVote = commentVote;
+		this.list = list;
+		this.ratingCount = ratingCount;
+		this.aspectRatio = aspectRatio;
+		this.embed = embed;
+		this.videoRespond = videoRespond;
 		this.rate = rate;
+		this.viewCount = viewCount;
 
 	}
 
