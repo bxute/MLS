@@ -3,10 +3,10 @@ import org.json.JSONObject;
 
 class PremiceModelParser {
 
-		SnippsModelParser snipps_parser = new SnippsModelParser();
-		PricemModelParser pricem_parser = new PricemModelParser();
-		DepthModelParser depth_parser = new DepthModelParser();
 		TagerModelParser tager_parser = new TagerModelParser();
+		PricemModelParser pricem_parser = new PricemModelParser();
+		SnippsModelParser snipps_parser = new SnippsModelParser();
+		DepthModelParser depth_parser = new DepthModelParser();
 
 		public PremiceModelParser() {
 		}
@@ -17,15 +17,15 @@ class PremiceModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					SnippsModel snipps = snipps_parser.parseSnippsModel(jsobj.getJSONObject("snipps").toString());
+					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
 					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
 
+					SnippsModel snipps = snipps_parser.parseSnippsModel(jsobj.getJSONObject("snipps").toString());
+
 					DepthModel depth = depth_parser.parseDepthModel(jsobj.getJSONObject("depth").toString());
 
-					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
-
-					local_model = new PremiceModel(snipps, pricem, depth, tager, );
+					local_model = new PremiceModel(tager, pricem, snipps, depth, );
  			} 
 			catch (JSONException e){
 

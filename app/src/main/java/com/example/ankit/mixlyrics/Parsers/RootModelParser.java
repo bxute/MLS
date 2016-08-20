@@ -19,7 +19,7 @@ class RootModelParser {
 
 					PremiceModel premice = premice_parser.parsePremiceModel(jsobj.getJSONObject("premice").toString());
 
-					local_model = new RootModel(wrappers, jsobj.getString("apiVersion") , jsobj.getString("itemsType") , premice, );
+					local_model = new RootModel(wrappers, premice, jsobj.getString("apiVersion") , jsobj.getString("itemsType") , );
  			} 
 			catch (JSONException e){
 

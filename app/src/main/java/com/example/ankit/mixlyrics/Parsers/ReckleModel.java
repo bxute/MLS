@@ -1,23 +1,23 @@
 
 class ReckleModel {
 
-	public ArePIseedsModel _arePIseeds;
-	public String id;
-	public StatuModel _statu;
-	public int commentCount;
 	public AdeesModel _adees;
 	public ThetaModel _theta;
+	public StatuModel _statu;
 	public ContestNoModel _contestNo;
+	public int commentCount;
+	public String _repe;
+	public ArePIseedsModel _arePIseeds;
 
-	public ReckleModel(ArePIseedsModel arePIseeds, String id, StatuModel statu, int commentCount, AdeesModel adees, ThetaModel theta, ContestNoModel contestNo) {
+	public ReckleModel(AdeesModel adees, ThetaModel theta, StatuModel statu, ContestNoModel contestNo, int commentCount, String _repe, ArePIseedsModel arePIseeds) {
 
-		this._arePIseeds = arePIseeds;
-		this.id = id;
-		this._statu = statu;
-		this.commentCount = commentCount;
 		this._adees = adees;
 		this._theta = theta;
+		this._statu = statu;
 		this._contestNo = contestNo;
+		this.commentCount = commentCount;
+		this._repe = _repe;
+		this._arePIseeds = arePIseeds;
 
 	}
 

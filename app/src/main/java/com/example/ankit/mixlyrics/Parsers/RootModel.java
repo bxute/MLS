@@ -2,16 +2,16 @@
 class RootModel {
 
 	public WrappersModel _wrappers;
+	public PremiceModel _premice;
 	public String apiVersion;
 	public String itemsType;
-	public PremiceModel _premice;
 
-	public RootModel(WrappersModel wrappers, String apiVersion, String itemsType, PremiceModel premice) {
+	public RootModel(WrappersModel wrappers, PremiceModel premice, String apiVersion, String itemsType) {
 
 		this._wrappers = wrappers;
+		this._premice = premice;
 		this.apiVersion = apiVersion;
 		this.itemsType = itemsType;
-		this._premice = premice;
 
 	}
 

@@ -13,7 +13,7 @@ class ThetaModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new ThetaModel(jsobj.getString("default") , jsobj.getString("hqDefault") , );
+					local_model = new ThetaModel(jsobj.getString("hqDeep") , jsobj.getString("ackn") , );
  			} 
 			catch (JSONException e){
 

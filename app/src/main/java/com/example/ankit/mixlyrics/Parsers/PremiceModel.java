@@ -1,17 +1,17 @@
 
 class PremiceModel {
 
-	public SnippsModel _snipps;
-	public PricemModel _pricem;
-	public DepthModel _depth;
 	public TagerModel _tager;
+	public PricemModel _pricem;
+	public SnippsModel _snipps;
+	public DepthModel _depth;
 
-	public PremiceModel(SnippsModel snipps, PricemModel pricem, DepthModel depth, TagerModel tager) {
+	public PremiceModel(TagerModel tager, PricemModel pricem, SnippsModel snipps, DepthModel depth) {
 
-		this._snipps = snipps;
-		this._pricem = pricem;
-		this._depth = depth;
 		this._tager = tager;
+		this._pricem = pricem;
+		this._snipps = snipps;
+		this._depth = depth;
 
 	}
 
