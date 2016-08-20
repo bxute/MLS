@@ -1,17 +1,17 @@
 
 class DepthModel {
 
-	public String type;
-	public Boolean required;
-	public CroopersModel _croopers;
 	public String description;
+	public String type;
+	public CroopersModel _croopers;
+	public Boolean required;
 
-	public DepthModel(String type, Boolean required, CroopersModel croopers, String description) {
+	public DepthModel(String description, String type, CroopersModel croopers, Boolean required) {
 
-		this.type = type;
-		this.required = required;
-		this._croopers = croopers;
 		this.description = description;
+		this.type = type;
+		this._croopers = croopers;
+		this.required = required;
 
 	}
 
