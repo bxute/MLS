@@ -19,7 +19,7 @@ class RootModelParser {
 
 					WrappersModel wrappers = wrappers_parser.parseWrappersModel(jsobj.getJSONObject("wrappers").toString());
 
-					local_model = new RootModel(jsobj.getString("itemsType") , premice, wrappers, jsobj.getString("apiVersion") , );
+					local_model = new RootModel(premice, jsobj.getString("itemsType") , jsobj.getString("apiVersion") , wrappers, );
  			} 
 			catch (JSONException e){
 

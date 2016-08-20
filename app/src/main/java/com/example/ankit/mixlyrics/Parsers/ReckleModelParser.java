@@ -4,10 +4,10 @@ import org.json.JSONObject;
 class ReckleModelParser {
 
 		AdeesModelParser adees_parser = new AdeesModelParser();
-		StatuModelParser statu_parser = new StatuModelParser();
-		ThetaModelParser theta_parser = new ThetaModelParser();
-		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
 		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
+		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
+		ThetaModelParser theta_parser = new ThetaModelParser();
+		SedModelParser sed_parser = new SedModelParser();
 
 		public ReckleModelParser() {
 		}
@@ -20,15 +20,15 @@ class ReckleModelParser {
 
 					AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
 
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
-
-					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
+					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
 
 					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
 
-					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
+					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
 
-					local_model = new ReckleModel(jsobj.getInt("commentCount") , adees, statu, theta, arePIseeds, jsobj.getString("_repe") , contestNo, );
+					SedModel sed = sed_parser.parseSedModel(jsobj.getJSONObject("sed").toString());
+
+					local_model = new ReckleModel(jsobj.getString("_repe") , adees, contestNo, arePIseeds, theta, sed, jsobj.getInt("commentCount") , );
  			} 
 			catch (JSONException e){
 

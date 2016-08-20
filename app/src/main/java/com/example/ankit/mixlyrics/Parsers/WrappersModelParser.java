@@ -26,7 +26,7 @@ class WrappersModelParser {
 
 					}
 
-					local_model = new WrappersModel(jsobj.getInt("itemsPerPage") , jsobj.getString("redeem") , reckles, );
+					local_model = new WrappersModel(reckles, jsobj.getString("redeem") , jsobj.getInt("itemsPerPage") , );
  			} 
 			catch (JSONException e){
 
