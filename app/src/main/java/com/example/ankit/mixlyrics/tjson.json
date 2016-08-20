@@ -1,8 +1,8 @@
 {
         "name":"Product",
-        "mine":
+        "product":
         {
-                "des":
+                "depth":
                 {
                     "content":{
                                 "1":"rtsp://v5.cache3.c.youtube.com/CiILENy.../0/0/0/video.3gp",
@@ -14,7 +14,7 @@
                         "description":"Product identifier",
                         "required":true
                 },
-                "ferns":
+                "format":
                 {
                         "description":"Name of the product",
                         "type":"string",
@@ -100,7 +100,7 @@
             "comment":"allowed",
             "value":"restricted",
             "reason":"limitedSyndication",
-          "aspectRatio":"widescreen",
+            "aspectRatio":"widescreen",
             "videoRespond":"moderated"
          }
         }
