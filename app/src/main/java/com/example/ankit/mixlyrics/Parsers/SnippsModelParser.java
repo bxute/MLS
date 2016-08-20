@@ -16,7 +16,7 @@ class SnippsModelParser {
 
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
-					local_model = new SnippsModel(jsobj.getString("description") , jsobj.getString("type") , des, jsobj.getBoolean("required") , );
+					local_model = new SnippsModel(jsobj.getString("description") , jsobj.getBoolean("required") , des, jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

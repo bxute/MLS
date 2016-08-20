@@ -2,16 +2,16 @@
 class SnippsModel {
 
 	public String description;
-	public String type;
-	public DesModel _des;
 	public Boolean required;
+	public DesModel _des;
+	public String type;
 
-	public SnippsModel(String description, String type, DesModel des, Boolean required) {
+	public SnippsModel(String description, Boolean required, DesModel des, String type) {
 
 		this.description = description;
-		this.type = type;
-		this._des = des;
 		this.required = required;
+		this._des = des;
+		this.type = type;
 
 	}
 

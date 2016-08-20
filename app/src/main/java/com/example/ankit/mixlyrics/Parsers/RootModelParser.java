@@ -3,8 +3,8 @@ import org.json.JSONObject;
 
 class RootModelParser {
 
-		WrappersModelParser wrappers_parser = new WrappersModelParser();
 		PremiceModelParser premice_parser = new PremiceModelParser();
+		WrappersModelParser wrappers_parser = new WrappersModelParser();
 
 		public RootModelParser() {
 		}
@@ -15,11 +15,11 @@ class RootModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					WrappersModel wrappers = wrappers_parser.parseWrappersModel(jsobj.getJSONObject("wrappers").toString());
-
 					PremiceModel premice = premice_parser.parsePremiceModel(jsobj.getJSONObject("premice").toString());
 
-					local_model = new RootModel(wrappers, premice, jsobj.getString("apiVersion") , jsobj.getString("itemsType") , );
+					WrappersModel wrappers = wrappers_parser.parseWrappersModel(jsobj.getJSONObject("wrappers").toString());
+
+					local_model = new RootModel(jsobj.getString("itemsType") , premice, wrappers, jsobj.getString("apiVersion") , );
  			} 
 			catch (JSONException e){
 

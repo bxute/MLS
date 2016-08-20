@@ -16,7 +16,7 @@ class StatuModelParser {
 
 					ContainerModel container = container_parser.parseContainerModel(jsobj.getJSONObject("container").toString());
 
-					local_model = new StatuModel(container, jsobj.getString("list") , jsobj.getString("value") , jsobj.getString("reason") , jsobj.getString("comment") , jsobj.getInt("modelist") , );
+					local_model = new StatuModel(jsobj.getString("tag") , jsobj.getString("comment") , container, jsobj.getString("sid") , jsobj.getString("made") , jsobj.getInt("modelist") , );
  			} 
 			catch (JSONException e){
 

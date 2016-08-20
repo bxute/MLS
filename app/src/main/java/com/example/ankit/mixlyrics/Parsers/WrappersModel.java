@@ -2,15 +2,15 @@ import java.util.ArrayList;
 
 class WrappersModel {
 
-	public ArrayList<ReckleModel> reckle;
 	public int itemsPerPage;
 	public String redeem;
+	public ArrayList<ReckleModel> reckle;
 
-	public WrappersModel(ArrayList<ReckleModel> reckle, int itemsPerPage, String redeem) {
+	public WrappersModel(int itemsPerPage, String redeem, ArrayList<ReckleModel> reckle) {
 
-		this.reckle = reckle;
 		this.itemsPerPage = itemsPerPage;
 		this.redeem = redeem;
+		this.reckle = reckle;
 
 	}
 
