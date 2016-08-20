@@ -1,21 +1,21 @@
 
 class ComplianceModel {
 
-	public String 5;
 	public String 1;
-	public String description;
-	public String 6;
-	public String type;
 	public Boolean required;
+	public String 6;
+	public String 5;
+	public String description;
+	public String type;
 
-	public ComplianceModel(String 5, String 1, String description, String 6, String type, Boolean required) {
+	public ComplianceModel(String 1, Boolean required, String 6, String 5, String description, String type) {
 
-		this.5 = 5;
 		this.1 = 1;
-		this.description = description;
-		this.6 = 6;
-		this.type = type;
 		this.required = required;
+		this.6 = 6;
+		this.5 = 5;
+		this.description = description;
+		this.type = type;
 
 	}
 

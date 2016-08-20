@@ -13,7 +13,7 @@ class CroopersModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new CroopersModel(jsobj.getString("6") , jsobj.getString("5") , jsobj.getString("1") , );
+					local_model = new CroopersModel(jsobj.getString("5") , jsobj.getString("1") , jsobj.getString("6") , );
  			} 
 			catch (JSONException e){
 

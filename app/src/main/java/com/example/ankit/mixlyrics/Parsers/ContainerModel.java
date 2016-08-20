@@ -3,28 +3,28 @@ import java.util.ArrayList;
 class ContainerModel {
 
 	public ArrayList<String> tags;
-	public String updatededon;
-	public String 5;
-	public String updatedon;
-	public String title;
-	public String uploadedby;
-	public String description;
-	public String 6;
 	public String uploadedon;
-	public String 1;
+	public String udecs;
+	public String remedy;
+	public String aperson;
+	public String post;
+	public String day;
+	public String description;
+	public String updatedon;
+	public String updatededon;
 
-	public ContainerModel(ArrayList<String> tags, String updatededon, String 5, String updatedon, String title, String uploadedby, String description, String 6, String uploadedon, String 1) {
+	public ContainerModel(ArrayList<String> tags, String uploadedon, String udecs, String remedy, String aperson, String post, String day, String description, String updatedon, String updatededon) {
 
 		this.tags = tags;
-		this.updatededon = updatededon;
-		this.5 = 5;
-		this.updatedon = updatedon;
-		this.title = title;
-		this.uploadedby = uploadedby;
-		this.description = description;
-		this.6 = 6;
 		this.uploadedon = uploadedon;
-		this.1 = 1;
+		this.udecs = udecs;
+		this.remedy = remedy;
+		this.aperson = aperson;
+		this.post = post;
+		this.day = day;
+		this.description = description;
+		this.updatedon = updatedon;
+		this.updatededon = updatededon;
 
 	}
 

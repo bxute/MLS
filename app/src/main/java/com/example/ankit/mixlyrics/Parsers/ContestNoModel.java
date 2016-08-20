@@ -1,15 +1,15 @@
 
 class ContestNoModel {
 
-	public String mackle;
-	public String remded;
 	public String process;
+	public String remded;
+	public String mackle;
 
-	public ContestNoModel(String mackle, String remded, String process) {
+	public ContestNoModel(String process, String remded, String mackle) {
 
-		this.mackle = mackle;
-		this.remded = remded;
 		this.process = process;
+		this.remded = remded;
+		this.mackle = mackle;
 
 	}
 
