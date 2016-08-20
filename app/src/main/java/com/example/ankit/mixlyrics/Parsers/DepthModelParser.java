@@ -16,7 +16,7 @@ class DepthModelParser {
 
 					CroopersModel croopers = croopers_parser.parseCroopersModel(jsobj.getJSONObject("croopers").toString());
 
-					local_model = new DepthModel(croopers, jsobj.getString("description") , jsobj.getBoolean("required") , jsobj.getString("type") , );
+					local_model = new DepthModel(jsobj.getString("type") , jsobj.getString("description") , jsobj.getBoolean("required") , croopers, );
  			} 
 			catch (JSONException e){
 

@@ -13,7 +13,7 @@ class ContestNoModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new ContestNoModel(jsobj.getString("process") , jsobj.getString("remded") , jsobj.getString("mackle") , );
+					local_model = new ContestNoModel(jsobj.getString("remded") , jsobj.getString("mise") , jsobj.getString("process") , );
  			} 
 			catch (JSONException e){
 

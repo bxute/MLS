@@ -24,7 +24,7 @@ class ContainerModelParser {
 
 					}
 
-					local_model = new ContainerModel(tagsjsobj.getString("uploadedon") , jsobj.getString("udecs") , jsobj.getString("remedy") , jsobj.getString("aperson") , jsobj.getString("post") , jsobj.getString("day") , jsobj.getString("description") , jsobj.getString("updatedon") , jsobj.getString("updatededon") , );
+					local_model = new ContainerModel(jsobj.getString("desc") , jsobj.getString("updateded") , jsobj.getString("post") , tagsjsobj.getString("uploadedon") , jsobj.getString("day") , jsobj.getString("updatedon") , jsobj.getString("udecs") , jsobj.getString("remedy") , jsobj.getString("aperson") , );
  			} 
 			catch (JSONException e){
 

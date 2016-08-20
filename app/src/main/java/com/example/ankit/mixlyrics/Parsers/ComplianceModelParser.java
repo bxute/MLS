@@ -13,7 +13,7 @@ class ComplianceModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new ComplianceModel(jsobj.getString("1") , jsobj.getBoolean("required") , jsobj.getString("6") , jsobj.getString("5") , jsobj.getString("description") , jsobj.getString("type") , );
+					local_model = new ComplianceModel(jsobj.getString("1") , jsobj.getString("type") , jsobj.getString("description") , jsobj.getString("5") , jsobj.getString("6") , jsobj.getBoolean("required") , );
  			} 
 			catch (JSONException e){
 
