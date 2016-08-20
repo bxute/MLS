@@ -16,7 +16,7 @@ class FernsModelParser {
 
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
-					local_model = new FernsModel(jsobj.getBoolean("required") , des, jsobj.getString("type") , jsobj.getString("description") , );
+					local_model = new FernsModel(jsobj.getBoolean("required") , jsobj.getString("type") , jsobj.getString("description") , des, );
  			} 
 			catch (JSONException e){
 

@@ -13,7 +13,7 @@ class CompModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					local_model = new CompModel(jsobj.getBoolean("required") , jsobj.getString("1") , jsobj.getString("6") , jsobj.getString("type") , jsobj.getString("5") , jsobj.getString("description") , );
+					local_model = new CompModel(jsobj.getBoolean("required") , jsobj.getString("5") , jsobj.getString("description") , jsobj.getString("6") , jsobj.getString("1") , jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

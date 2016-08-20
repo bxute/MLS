@@ -2,16 +2,16 @@
 class FernsModel {
 
 	public Boolean required;
-	public DesModel _des;
 	public String type;
 	public String description;
+	public DesModel _des;
 
-	public FernsModel(Boolean required, DesModel des, String type, String description) {
+	public FernsModel(Boolean required, String type, String description, DesModel des) {
 
 		this.required = required;
-		this._des = des;
 		this.type = type;
 		this.description = description;
+		this._des = des;
 
 	}
 

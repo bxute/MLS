@@ -5,10 +5,10 @@ import org.json.JSONArray;
 
 class ExsodeModelParser {
 
-		AdeesModelParser adees_parser = new AdeesModelParser();
-		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
-		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
 		StatuModelParser statu_parser = new StatuModelParser();
+		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
+		AdeesModelParser adees_parser = new AdeesModelParser();
+		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
 		ThetaModelParser theta_parser = new ThetaModelParser();
 
 		public ExsodeModelParser() {
@@ -29,17 +29,17 @@ class ExsodeModelParser {
 
 					}
 
-					AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
+					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
 
 					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
 
-					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
+					AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
 
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
+					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
 
 					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
 
-					local_model = new ExsodeModel(jsobj.getString("updatedon") , tagsadees, jsobj.getString("uploadedon") , contestNo, jsobj.getString("uploadedby") , jsobj.getString("updatededon") , jsobj.getString("description") , arePIseeds, statu, jsobj.getString("title") , theta, jsobj.getString("id") , jsobj.getInt("commentCount") , );
+					local_model = new ExsodeModel(jsobj.getString("id") , tagsjsobj.getString("title") , jsobj.getString("updatedon") , jsobj.getString("uploadedby") , jsobj.getInt("commentCount") , jsobj.getString("uploadedon") , statu, contestNo, adees, jsobj.getString("description") , arePIseeds, jsobj.getString("updatededon") , theta, );
  			} 
 			catch (JSONException e){
 
