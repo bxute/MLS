@@ -3,9 +3,9 @@ import org.json.JSONObject;
 
 class MineModelParser {
 
-		PricemModelParser pricem_parser = new PricemModelParser();
 		TagerModelParser tager_parser = new TagerModelParser();
 		FernsModelParser ferns_parser = new FernsModelParser();
+		PricemModelParser pricem_parser = new PricemModelParser();
 		DesModelParser des_parser = new DesModelParser();
 
 		public MineModelParser() {
@@ -17,15 +17,15 @@ class MineModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
-
 					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
 
 					FernsModel ferns = ferns_parser.parseFernsModel(jsobj.getJSONObject("ferns").toString());
 
+					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
+
 					DesModel des = des_parser.parseDesModel(jsobj.getJSONObject("des").toString());
 
-					local_model = new MineModel(pricem, tager, ferns, des, );
+					local_model = new MineModel(tager, ferns, pricem, des, );
  			} 
 			catch (JSONException e){
 
