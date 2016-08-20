@@ -1,16 +1,16 @@
 
 class RootModel {
 
-	public MederModel _meder;
-	public WricModel _wric;
 	public String name;
+	public WricModel _wric;
+	public MederModel _meder;
 	public String apiVersion;
 
-	public RootModel(MederModel meder, WricModel wric, String name, String apiVersion) {
+	public RootModel(String name, WricModel wric, MederModel meder, String apiVersion) {
 
-		this._meder = meder;
-		this._wric = wric;
 		this.name = name;
+		this._wric = wric;
+		this._meder = meder;
 		this.apiVersion = apiVersion;
 
 	}
