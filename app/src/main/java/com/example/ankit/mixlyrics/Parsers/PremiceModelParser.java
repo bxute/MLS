@@ -3,10 +3,10 @@ import org.json.JSONObject;
 
 class PremiceModelParser {
 
-		TagerModelParser tager_parser = new TagerModelParser();
 		DepthModelParser depth_parser = new DepthModelParser();
-		SizerModelParser sizer_parser = new SizerModelParser();
+		SnippsModelParser snipps_parser = new SnippsModelParser();
 		PricemModelParser pricem_parser = new PricemModelParser();
+		TagerModelParser tager_parser = new TagerModelParser();
 
 		public PremiceModelParser() {
 		}
@@ -17,15 +17,15 @@ class PremiceModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
-
 					DepthModel depth = depth_parser.parseDepthModel(jsobj.getJSONObject("depth").toString());
 
-					SizerModel sizer = sizer_parser.parseSizerModel(jsobj.getJSONObject("sizer").toString());
+					SnippsModel snipps = snipps_parser.parseSnippsModel(jsobj.getJSONObject("snipps").toString());
 
 					PricemModel pricem = pricem_parser.parsePricemModel(jsobj.getJSONObject("pricem").toString());
 
-					local_model = new PremiceModel(tager, depth, sizer, pricem, );
+					TagerModel tager = tager_parser.parseTagerModel(jsobj.getJSONObject("tager").toString());
+
+					local_model = new PremiceModel(depth, snipps, pricem, tager, );
  			} 
 			catch (JSONException e){
 

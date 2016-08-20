@@ -16,7 +16,7 @@ class AdeesModelParser {
 
 					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
 
-					local_model = new AdeesModel(jsobj.getString("aspectRatio") , jsobj.getString("videoRespond") , jsobj.getString("list") , jsobj.getString("value") , jsobj.getString("reason") , content, jsobj.getString("comment") , jsobj.getInt("duration") , );
+					local_model = new AdeesModel(jsobj.getString("list") , jsobj.getString("aspectRatio") , jsobj.getString("videoRespond") , jsobj.getString("reason") , jsobj.getInt("duration") , content, jsobj.getString("value") , jsobj.getString("comment") , );
  			} 
 			catch (JSONException e){
 
