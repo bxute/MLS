@@ -3,11 +3,11 @@ import org.json.JSONObject;
 
 class ExpressModelParser {
 
-		ThetaModelParser theta_parser = new ThetaModelParser();
-		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
-		StatuModelParser statu_parser = new StatuModelParser();
-		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
 		AdeesModelParser adees_parser = new AdeesModelParser();
+		ArePIseedsModelParser arePIseeds_parser = new ArePIseedsModelParser();
+		ContestNoModelParser contestNo_parser = new ContestNoModelParser();
+		ThetaModelParser theta_parser = new ThetaModelParser();
+		StatuModelParser statu_parser = new StatuModelParser();
 
 		public ExpressModelParser() {
 		}
@@ -18,17 +18,17 @@ class ExpressModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
+					AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
 
 					ArePIseedsModel arePIseeds = arePIseeds_parser.parseArePIseedsModel(jsobj.getJSONObject("arePIseeds").toString());
 
-					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
-
 					ContestNoModel contestNo = contestNo_parser.parseContestNoModel(jsobj.getJSONObject("contestNo").toString());
 
-					AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
+					ThetaModel theta = theta_parser.parseThetaModel(jsobj.getJSONObject("theta").toString());
 
-					local_model = new ExpressModel(theta, jsobj.getString("id") , arePIseeds, jsobj.getInt("commentCount") , statu, contestNo, adees, );
+					StatuModel statu = statu_parser.parseStatuModel(jsobj.getJSONObject("statu").toString());
+
+					local_model = new ExpressModel(adees, jsobj.getInt("commentCount") , arePIseeds, jsobj.getString("id") , contestNo, theta, statu, );
  			} 
 			catch (JSONException e){
 

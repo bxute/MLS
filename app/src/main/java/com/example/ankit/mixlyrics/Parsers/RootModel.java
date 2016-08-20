@@ -2,16 +2,16 @@
 class RootModel {
 
 	public String apiVersion;
-	public WrppersModel _wrppers;
-	public MineModel _mine;
+	public ProductModel _product;
 	public String name;
+	public WrppersModel _wrppers;
 
-	public RootModel(String apiVersion, WrppersModel wrppers, MineModel mine, String name) {
+	public RootModel(String apiVersion, ProductModel product, String name, WrppersModel wrppers) {
 
 		this.apiVersion = apiVersion;
-		this._wrppers = wrppers;
-		this._mine = mine;
+		this._product = product;
 		this.name = name;
+		this._wrppers = wrppers;
 
 	}
 
