@@ -1,16 +1,16 @@
 
 class DesModel {
 
-	public Boolean required;
-	public ContentModel _content;
 	public String type;
+	public ContentModel _content;
+	public Boolean required;
 	public String description;
 
-	public DesModel(Boolean required, ContentModel content, String type, String description) {
+	public DesModel(String type, ContentModel content, Boolean required, String description) {
 
-		this.required = required;
-		this._content = content;
 		this.type = type;
+		this._content = content;
+		this.required = required;
 		this.description = description;
 
 	}
