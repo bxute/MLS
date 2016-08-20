@@ -1,13 +1,13 @@
 
 class ThetaModel {
 
-	public String default;
 	public String hqDefault;
+	public String default;
 
-	public ThetaModel(String default, String hqDefault) {
+	public ThetaModel(String hqDefault, String default) {
 
-		this.default = default;
 		this.hqDefault = hqDefault;
+		this.default = default;
 
 	}
 
