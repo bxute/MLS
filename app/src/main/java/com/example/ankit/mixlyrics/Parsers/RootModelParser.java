@@ -3,8 +3,8 @@ import org.json.JSONObject;
 
 class RootModelParser {
 
-		WricModelParser wric_parser = new WricModelParser();
-		MederModelParser meder_parser = new MederModelParser();
+		MineModelParser mine_parser = new MineModelParser();
+		WrppersModelParser wrppers_parser = new WrppersModelParser();
 
 		public RootModelParser() {
 		}
@@ -15,11 +15,11 @@ class RootModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					WricModel wric = wric_parser.parseWricModel(jsobj.getJSONObject("wric").toString());
+					MineModel mine = mine_parser.parseMineModel(jsobj.getJSONObject("mine").toString());
 
-					MederModel meder = meder_parser.parseMederModel(jsobj.getJSONObject("meder").toString());
+					WrppersModel wrppers = wrppers_parser.parseWrppersModel(jsobj.getJSONObject("wrppers").toString());
 
-					local_model = new RootModel(jsobj.getString("name") , wric, meder, jsobj.getString("apiVersion") , );
+					local_model = new RootModel(jsobj.getString("name") , jsobj.getString("apiVersion") , mine, wrppers, );
  			} 
 			catch (JSONException e){
 
