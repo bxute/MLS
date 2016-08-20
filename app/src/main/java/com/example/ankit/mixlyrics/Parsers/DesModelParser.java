@@ -16,7 +16,7 @@ class DesModelParser {
 
 					ComplianceModel compliance = compliance_parser.parseComplianceModel(jsobj.getJSONObject("compliance").toString());
 
-					local_model = new DesModel(jsobj.getBoolean("required") , jsobj.getString("description") , compliance, jsobj.getString("type") , );
+					local_model = new DesModel(compliance, jsobj.getBoolean("required") , jsobj.getString("description") , jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

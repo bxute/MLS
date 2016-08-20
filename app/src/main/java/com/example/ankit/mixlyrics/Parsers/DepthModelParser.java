@@ -3,7 +3,7 @@ import org.json.JSONObject;
 
 class DepthModelParser {
 
-		ContentModelParser content_parser = new ContentModelParser();
+		KriteModelParser krite_parser = new KriteModelParser();
 
 		public DepthModelParser() {
 		}
@@ -14,9 +14,9 @@ class DepthModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					ContentModel content = content_parser.parseContentModel(jsobj.getJSONObject("content").toString());
+					KriteModel krite = krite_parser.parseKriteModel(jsobj.getJSONObject("krite").toString());
 
-					local_model = new DepthModel(jsobj.getBoolean("required") , jsobj.getString("description") , content, jsobj.getString("type") , );
+					local_model = new DepthModel(krite, jsobj.getString("description") , jsobj.getBoolean("required") , jsobj.getString("type") , );
  			} 
 			catch (JSONException e){
 

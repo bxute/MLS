@@ -1,16 +1,16 @@
 
 class DepthModel {
 
-	public Boolean required;
+	public KriteModel _krite;
 	public String description;
-	public ContentModel _content;
+	public Boolean required;
 	public String type;
 
-	public DepthModel(Boolean required, String description, ContentModel content, String type) {
+	public DepthModel(KriteModel krite, String description, Boolean required, String type) {
 
-		this.required = required;
+		this._krite = krite;
 		this.description = description;
-		this._content = content;
+		this.required = required;
 		this.type = type;
 
 	}

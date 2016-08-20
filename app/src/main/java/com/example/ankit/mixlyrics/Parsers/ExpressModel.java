@@ -1,23 +1,23 @@
 
 class ExpressModel {
 
-	public AdeesModel _adees;
-	public int commentCount;
-	public ArePIseedsModel _arePIseeds;
 	public String id;
-	public ContestNoModel _contestNo;
 	public ThetaModel _theta;
+	public int commentCount;
 	public StatuModel _statu;
+	public ArePIseedsModel _arePIseeds;
+	public ContestNoModel _contestNo;
+	public AdeesModel _adees;
 
-	public ExpressModel(AdeesModel adees, int commentCount, ArePIseedsModel arePIseeds, String id, ContestNoModel contestNo, ThetaModel theta, StatuModel statu) {
+	public ExpressModel(String id, ThetaModel theta, int commentCount, StatuModel statu, ArePIseedsModel arePIseeds, ContestNoModel contestNo, AdeesModel adees) {
 
-		this._adees = adees;
-		this.commentCount = commentCount;
-		this._arePIseeds = arePIseeds;
 		this.id = id;
-		this._contestNo = contestNo;
 		this._theta = theta;
+		this.commentCount = commentCount;
 		this._statu = statu;
+		this._arePIseeds = arePIseeds;
+		this._contestNo = contestNo;
+		this._adees = adees;
 
 	}
 
