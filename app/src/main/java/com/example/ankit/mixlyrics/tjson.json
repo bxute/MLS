@@ -1,10 +1,10 @@
 {
-        "name":"Product",
+        "itemsType":"Product",
         "premice":
         {
                 "depth":
                 {
-                    "krite":{
+                    "croopers":{
                                 "1":"rtsp://v5.cache3.c.youtube.com/CiILENy.../0/0/0/video.3gp",
                                 "5":"http://www.youtube.com/v/hYB0mn5zh2c?f...",
                                 "6":"rtsp://v1.cache1.c.youtube.com/CiILENy.../0/0/0/video.3gp"
@@ -14,7 +14,7 @@
                         "description":"Product identifier",
                         "required":true
                 },
-                "sizer":
+                "snipps":
                 {
                         "description":"Name of the product",
                         "type":"string",
