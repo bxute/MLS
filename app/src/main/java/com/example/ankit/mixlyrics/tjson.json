@@ -15,9 +15,9 @@
                 "list": "allowed",
                 "content": {
                 },
-                "comment": "allowed",
+                "com": "allowed",
                 "value": "restricted",
-                "reason": "limitedSyndication",
+                "reasonads": "limitedSyndication",
                 "aspectRatio": "widescreen",
                 "videoRespond": "moderated"
             },
