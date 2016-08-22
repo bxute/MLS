@@ -1,5 +1,5 @@
 {
-    "full": {
+    "flack": {
         "background_image": "/images/fossasia16.jpg",
         "call_for_papers": {
             "announcement": "<p>Wanna speak at our prestigious event. Send us a proposal</p>",
@@ -10,6 +10,17 @@
         },
         "code_of_conduct": "",
         "copyright": {
+            "adees": {
+                "duration": 2840,
+                "list": "allowed",
+                "content": {
+                },
+                "comment": "allowed",
+                "value": "restricted",
+                "reason": "limitedSyndication",
+                "aspectRatio": "widescreen",
+                "videoRespond": "moderated"
+            },
             "state": "Completed",
             "sub_topic": null,
             "ticket_url": null,

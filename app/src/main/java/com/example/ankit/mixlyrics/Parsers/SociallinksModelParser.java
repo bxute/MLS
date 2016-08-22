@@ -16,7 +16,7 @@ class SociallinksModelParser {
 
 			Call_for_papersModel call_for_papers = call_for_papers_parser.parseCall_for_papersModel(jsobj.getJSONObject("call_for_papers").toString());
 
-			local_model = new SociallinksModel(jsobj.getInt("id"), call_for_papers, );
+			local_model = new SociallinksModel(call_for_papers, jsobj.getInt("id"), );
 		} catch (JSONException e) {
 
 			e.printStackTrace();
