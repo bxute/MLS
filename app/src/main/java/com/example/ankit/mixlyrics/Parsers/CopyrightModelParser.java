@@ -13,7 +13,7 @@ class CopyrightModelParser {
 		try {
 			JSONObject jsobj = new JSONObject(json_object);
 
-			local_model = new CopyrightModel(jsobj.getString("logo"), jsobj.getInt("year"), jsobj.getString("holder"), jsobj.getString("licence"), jsobj.getString("holder_url"), jsobj.getString("licence_url"), );
+			local_model = new CopyrightModel(jsobj.getInt("year"), jsobj.getString("email"), jsobj.getString("holder"), jsobj.getInt("id"), jsobj.getString("logo"), jsobj.getString("licence_url"), jsobj.getString("end_time"), jsobj.getString("licence"), jsobj.getString("holder_url"), );
 		} catch (JSONException e) {
 
 			e.printStackTrace();
