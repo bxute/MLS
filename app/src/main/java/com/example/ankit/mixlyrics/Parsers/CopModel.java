@@ -2,55 +2,55 @@ import java.util.ArrayList;
 
 class CopModel {
 
-	public String type;
-	public AdeesModel _adees;
-	public String name;
-	public VersionModel _version;
-	public int tracks_ver;
-	public int sponsors_ver;
 	public int id;
-	public String organizer_name;
-	public String logo;
-	public String time_zone;
-	public String privacy;
-	public String schedulepublished_on;
-	public String topic;
-	public String location_name;
-	public String description;
-	public ArrayList<SociallinksModel> sociallinks;
-	public String email;
-	public String start_time;
-	public String organizer_description;
-	public CreatorModel _creator;
 	public String end_time;
+	public AdeesModel _adees;
+	public String time_zone;
+	public CreatorModel _creator;
+	public String location_name;
+	public String logo;
+	public int sponsors_ver;
+	public String privacy;
 	public String state;
+	public int tracks_ver;
+	public String type;
+	public String email;
 	public int speakers_ver;
+	public String organizer_name;
+	public ArrayList<SociallinksModel> sociallinks;
+	public VersionModel _version;
+	public String description;
+	public String name;
+	public String organizer_description;
+	public String start_time;
+	public String topic;
+	public String schedulepublished_on;
 
-	public CopModel(String type, AdeesModel adees, String name, VersionModel version, int tracks_ver, int sponsors_ver, int id, String organizer_name, String logo, String time_zone, String privacy, String schedulepublished_on, String topic, String location_name, String description, ArrayList<SociallinksModel> sociallinks, String email, String start_time, String organizer_description, CreatorModel creator, String end_time, String state, int speakers_ver) {
+	public CopModel(int id, String end_time, AdeesModel adees, String time_zone, CreatorModel creator, String location_name, String logo, int sponsors_ver, String privacy, String state, int tracks_ver, String type, String email, int speakers_ver, String organizer_name, ArrayList<SociallinksModel> sociallinks, VersionModel version, String description, String name, String organizer_description, String start_time, String topic, String schedulepublished_on) {
 
-		this.type = type;
-		this._adees = adees;
-		this.name = name;
-		this._version = version;
-		this.tracks_ver = tracks_ver;
-		this.sponsors_ver = sponsors_ver;
 		this.id = id;
-		this.organizer_name = organizer_name;
-		this.logo = logo;
-		this.time_zone = time_zone;
-		this.privacy = privacy;
-		this.schedulepublished_on = schedulepublished_on;
-		this.topic = topic;
-		this.location_name = location_name;
-		this.description = description;
-		this.sociallinks = sociallinks;
-		this.email = email;
-		this.start_time = start_time;
-		this.organizer_description = organizer_description;
-		this._creator = creator;
 		this.end_time = end_time;
+		this._adees = adees;
+		this.time_zone = time_zone;
+		this._creator = creator;
+		this.location_name = location_name;
+		this.logo = logo;
+		this.sponsors_ver = sponsors_ver;
+		this.privacy = privacy;
 		this.state = state;
+		this.tracks_ver = tracks_ver;
+		this.type = type;
+		this.email = email;
 		this.speakers_ver = speakers_ver;
+		this.organizer_name = organizer_name;
+		this.sociallinks = sociallinks;
+		this._version = version;
+		this.description = description;
+		this.name = name;
+		this.organizer_description = organizer_description;
+		this.start_time = start_time;
+		this.topic = topic;
+		this.schedulepublished_on = schedulepublished_on;
 
 	}
 
