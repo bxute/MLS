@@ -3,7 +3,6 @@ import org.json.JSONObject;
 
 class CopyrightModelParser {
 
-	Call_for_papersModelParser call_for_papers_parser = new Call_for_papersModelParser();
 
 	public CopyrightModelParser() {
 	}
@@ -14,15 +13,13 @@ class CopyrightModelParser {
 		try {
 			JSONObject jsobj = new JSONObject(json_object);
 
-			Call_for_papersModel call_for_papers = call_for_papers_parser.parseCall_for_papersModel(jsobj.getJSONObject("call_for_papers").toString());
-
-			local_model = new CopyrightModel(jsobj.getInt("year"), jsobj.getString("logo"), jsobj.getString("holder_url"), jsobj.getString("end_time"), jsobj.getString("holder"), jsobj.getString("licence_url"), jsobj.getString("licence"), jsobj.getString("email"), call_for_papers, jsobj.getInt("id"), );
+			local_model = new CopyrightModel(jsobj.getInt("year"), jsobj.getString("licence"), jsobj.getString("logo"), jsobj.getString("holder_url"), jsobj.getString("holder"), jsobj.getString("licence_url"), );
 		} catch (JSONException e) {
 
 			e.printStackTrace();
 		}
 
 		return local_model;
-	}
+		}
 			
 }
