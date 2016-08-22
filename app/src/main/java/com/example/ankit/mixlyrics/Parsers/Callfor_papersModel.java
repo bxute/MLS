@@ -1,12 +1,12 @@
 
 class Callfor_papersModel {
 
-    public String announcement;
+	public String announce;
 
-    public Callfor_papersModel(String announcement) {
+	public Callfor_papersModel(String announce) {
 
-        this.announcement = announcement;
+		this.announce = announce;
 
-    }
+	}
 
 }

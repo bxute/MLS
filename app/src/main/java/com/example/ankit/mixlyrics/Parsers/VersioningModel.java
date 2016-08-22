@@ -1,22 +1,22 @@
 
 class VersioningModel {
 
-    public String startdate;
-    public int eventver;
-    public String timezone;
-    public int tracksver;
-    public String enddate;
-    public String privacy;
+	public int eventver;
+	public String enter;
+	public String timezone;
+	public String startdate;
+	public String privacy;
+	public int trsver;
 
-    public VersioningModel(String startdate, int eventver, String timezone, int tracksver, String enddate, String privacy) {
+	public VersioningModel(int eventver, String enter, String timezone, String startdate, String privacy, int trsver) {
 
-        this.startdate = startdate;
-        this.eventver = eventver;
-        this.timezone = timezone;
-        this.tracksver = tracksver;
-        this.enddate = enddate;
-        this.privacy = privacy;
+		this.eventver = eventver;
+		this.enter = enter;
+		this.timezone = timezone;
+		this.startdate = startdate;
+		this.privacy = privacy;
+		this.trsver = trsver;
 
-    }
+	}
 
 }
