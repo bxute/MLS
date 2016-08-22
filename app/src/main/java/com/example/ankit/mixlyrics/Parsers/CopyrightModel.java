@@ -1,27 +1,29 @@
 
 class CopyrightModel {
 
-	public int year;
-	public String email;
-	public String holder;
-	public int id;
-	public String logo;
-	public String licence_url;
-	public String end_time;
-	public String licence;
 	public String holder_url;
+	public String licence;
+	public String end_time;
+	public String holder;
+	public Call_for_papersModel _call_for_papers;
+	public String licence_url;
+	public int id;
+	public String email;
+	public int year;
+	public String logo;
 
-	public CopyrightModel(int year, String email, String holder, int id, String logo, String licence_url, String end_time, String licence, String holder_url) {
+	public CopyrightModel(String holder_url, String licence, String end_time, String holder, Call_for_papersModel call_for_papers, String licence_url, int id, String email, int year, String logo) {
 
-		this.year = year;
-		this.email = email;
-		this.holder = holder;
-		this.id = id;
-		this.logo = logo;
-		this.licence_url = licence_url;
-		this.end_time = end_time;
-		this.licence = licence;
 		this.holder_url = holder_url;
+		this.licence = licence;
+		this.end_time = end_time;
+		this.holder = holder;
+		this._call_for_papers = call_for_papers;
+		this.licence_url = licence_url;
+		this.id = id;
+		this.email = email;
+		this.year = year;
+		this.logo = logo;
 
 	}
 

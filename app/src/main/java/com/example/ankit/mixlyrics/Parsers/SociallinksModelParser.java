@@ -4,22 +4,22 @@ import org.json.JSONObject;
 class SociallinksModelParser {
 
 
-    public SociallinksModelParser() {
-    }
+	public SociallinksModelParser() {
+	}
 
-    public SociallinksModel parseSociallinksModel(String json_object) {
+	public SociallinksModel parseSociallinksModel(String json_object) {
 
-        SociallinksModel local_model = null;
-        try {
-            JSONObject jsobj = new JSONObject(json_object);
+		SociallinksModel local_model = null;
+		try {
+			JSONObject jsobj = new JSONObject(json_object);
 
-            local_model = new SociallinksModel(jsobj.getString("name"), jsobj.getString("link"), jsobj.getInt("id"), );
-        } catch (JSONException e) {
+			local_model = new SociallinksModel(jsobj.getString("link"), jsobj.getString("name"), jsobj.getInt("id"), );
+		} catch (JSONException e) {
 
-            e.printStackTrace();
-        }
+			e.printStackTrace();
+		}
 
-        return local_model;
-    }
-
+		return local_model;
+	}
+			
 }

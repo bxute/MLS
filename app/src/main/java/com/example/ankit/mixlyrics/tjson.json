@@ -13,6 +13,13 @@
         "email": "contact@fossasia.org",
         "end_time": "2016-03-20T09:30:00",
         "id": 1,
+        "call_for_papers": {
+            "announcement": "<p>Wanna speak at our prestigious event. Send us a proposal</p>",
+            "end_date": "2016-03-16T20:30:00",
+            "privacy": "public",
+            "start_date": "2016-03-10T19:30:00",
+            "timezone": "UTC"
+        },
         "latitude": 1.346,
         "holder_url": "http://fossasia.org/contact/",
         "licence": "Creative Commons Attribution License",
