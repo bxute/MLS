@@ -16,7 +16,7 @@ class CopyrightModelParser {
 
 			Call_for_papersModel call_for_papers = call_for_papers_parser.parseCall_for_papersModel(jsobj.getJSONObject("call_for_papers").toString());
 
-			local_model = new CopyrightModel(jsobj.getInt("id"), jsobj.getString("logo"), call_for_papers, jsobj.getString("end_time"), jsobj.getString("licence"), jsobj.getString("licence_url"), jsobj.getString("email"), jsobj.getInt("year"), jsobj.getString("holder"), jsobj.getString("holder_url"), );
+			local_model = new CopyrightModel(jsobj.getInt("id"), jsobj.getString("licence"), jsobj.getString("end_time"), jsobj.getString("email"), jsobj.getString("licence_url"), jsobj.getString("holder"), jsobj.getString("holder_url"), call_for_papers, jsobj.getInt("year"), jsobj.getString("logo"), );
 		} catch (JSONException e) {
 
 			e.printStackTrace();

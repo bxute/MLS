@@ -39,7 +39,7 @@
                 "year": 2016
             },
             "creator": {
-                "email": "s@g.com"
+                "Email": "s@g.com"
             },
             "description": "FOSSASIA is the premier Free and Open Source technology event in Asia for developers, start-ups, and contributors. Projects at FOSSASIA range from open hardware, to design, graphics and software. FOSSASIA was established in 2009. Previous events took place in Cambodia and Vietnam.",
             "email": "contact@fossasia.org",
@@ -53,9 +53,9 @@
             "organizer_description": "The Internet of Things for Me at Asia's Premier Open Technology Event",
             "organizer_name": "FOSSASIA",
             "privacy": "public",
-            "schedule_published_on": "2016-03-18T00:00:00",
+            "schedulepublished_on": "2016-03-18T00:00:00",
             "searchable_location_name": null,
-            "social_links": [
+            "sociallinks": [
                 {
                     "id": 1,
                     "link": "https://twitter.com/fossasia",
