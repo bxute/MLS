@@ -5,10 +5,10 @@ import org.json.JSONArray;
 
 class CopModelParser {
 
-	AdeesModelParser adees_parser = new AdeesModelParser();
-	VersionModelParser version_parser = new VersionModelParser();
-	SociallinksModelParser sociallinks_parser;
 	CreatorModelParser creator_parser = new CreatorModelParser();
+	SociallinksModelParser sociallinks_parser;
+	VersionModelParser version_parser = new VersionModelParser();
+	AdeesModelParser adees_parser = new AdeesModelParser();
 
 	public CopModelParser() {
 		sociallinks_parser = new SociallinksModelParser();
@@ -20,9 +20,7 @@ class CopModelParser {
 		try {
 			JSONObject jsobj = new JSONObject(json_object);
 
-			AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
-
-			VersionModel version = version_parser.parseVersionModel(jsobj.getJSONObject("version").toString());
+			CreatorModel creator = creator_parser.parseCreatorModel(jsobj.getJSONObject("creator").toString());
 
 			ArrayList<SociallinksModel> sociallinkss = new ArrayList<>();
 			JSONArray sociallinks_arr = jsobj.getJSONArray("sociallinks");
@@ -33,9 +31,11 @@ class CopModelParser {
 
 			}
 
-			CreatorModel creator = creator_parser.parseCreatorModel(jsobj.getJSONObject("creator").toString());
+			VersionModel version = version_parser.parseVersionModel(jsobj.getJSONObject("version").toString());
 
-			local_model = new CopModel(jsobj.getString("state"), jsobj.getString("privacy"), jsobj.getString("time_zone"), jsobj.getString("type"), jsobj.getString("end_time"), jsobj.getInt("sponsors_ver"), adees, jsobj.getString("logo"), jsobj.getString("description"), version, jsobj.getString("start_time"), jsobj.getString("organizer_name"), jsobj.getString("schedulepublished_on"), jsobj.getString("location_name"), sociallinkss, jsobj.getString("name"), jsobj.getString("email"), jsobj.getInt("speakers_ver"), jsobj.getString("topic"), jsobj.getString("organizer_description"), creator, jsobj.getInt("id"), jsobj.getInt("tracks_ver"), );
+			AdeesModel adees = adees_parser.parseAdeesModel(jsobj.getJSONObject("adees").toString());
+
+			local_model = new CopModel(jsobj.getString("organizer_description"), creator, jsobj.getString("start_time"), sociallinkss, jsobj.getString("organizer_name"), jsobj.getString("name"), jsobj.getString("end_time"), jsobj.getString("topic"), jsobj.getString("schedulepublished_on"), jsobj.getString("location_name"), jsobj.getInt("tracks_ver"), jsobj.getString("state"), jsobj.getString("type"), jsobj.getString("time_zone"), jsobj.getInt("speakers_ver"), jsobj.getString("logo"), jsobj.getString("description"), jsobj.getInt("id"), version, jsobj.getInt("sponsors_ver"), jsobj.getString("privacy"), jsobj.getString("email"), adees, );
 		} catch (JSONException e) {
 
 			e.printStackTrace();
