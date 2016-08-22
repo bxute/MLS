@@ -1,8 +1,6 @@
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 
 class RootModelParser {
@@ -40,7 +38,7 @@ class RootModelParser {
 
 				}
 
-				local_model = new RootModel(version, jsobj.getString("privacy"), jsobj.getString("topic"), call_for_papers, jsobj.getString("email"), jsobj.getString("code_of_conduct"), jsobj.getInt("id"), jsobj.getString("state"), copyright, jsobj.getString("name"), jsobj.getString("background_image"), creator, jsobj.getString("type"), jsobj.getString("schedule_published_on"), jsobj.getString("end_time"), jsobj.getString("description"), jsobj.getString("location_name"), jsobj.getString("timezone"), jsobj.getString("organizer_name"), jsobj.getString("logo"), social_linkss, jsobj.getString("organizer_description"), jsobj.getString("start_time"), );
+				local_model = new RootModel(jsobj.getString("background_image"), jsobj.getString("logo"), jsobj.getString("organizer_name"), jsobj.getString("name"), jsobj.getString("privacy"), version, jsobj.getString("organizer_description"), jsobj.getString("description"), jsobj.getString("starttime"), jsobj.getString("type"), jsobj.getString("location_name"), jsobj.getString("code_of_conduct"), jsobj.getString("topic"), call_for_papers, jsobj.getInt("id"), copyright, jsobj.getString("schedule_published_on"), creator, jsobj.getString("state"), jsobj.getString("end_time"), social_linkss, jsobj.getString("email"), jsobj.getString("timezone"), );
  			} 
 			catch (JSONException e){
 

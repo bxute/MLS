@@ -75,7 +75,7 @@
             "name": "External Event URL"
         }
     ],
-    "start_time": "2016-03-18T01:30:00",
+    "starttime": "2016-03-18T01:30:00",
     "state": "Completed",
     "sub_topic": null,
     "ticket_url": null,
