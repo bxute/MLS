@@ -22,9 +22,9 @@
                 "videoRespond": "moderated"
             },
             "state": "Completed",
-            "sub_topic": null,
-            "ticket_url": null,
-            "timezone": "UTC",
+            "subtopic": null,
+            "ticketurl": null,
+            "time_zone": "UTC",
             "topic": "Science & Technology",
             "type": "Conference",
             "version": {

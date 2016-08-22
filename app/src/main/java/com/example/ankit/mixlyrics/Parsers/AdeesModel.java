@@ -1,25 +1,25 @@
 
 class AdeesModel {
 
-	public String videoRespond;
-	public String value;
-	public String list;
-	public String aspectRatio;
-	public ContentModel _content;
-	public String comment;
-	public String reason;
+	public String com;
 	public int duration;
+	public String value;
+	public ContentModel _content;
+	public String videoRespond;
+	public String aspectRatio;
+	public String list;
+	public String reasonads;
 
-	public AdeesModel(String videoRespond, String value, String list, String aspectRatio, ContentModel content, String comment, String reason, int duration) {
+	public AdeesModel(String com, int duration, String value, ContentModel content, String videoRespond, String aspectRatio, String list, String reasonads) {
 
-		this.videoRespond = videoRespond;
-		this.value = value;
-		this.list = list;
-		this.aspectRatio = aspectRatio;
-		this._content = content;
-		this.comment = comment;
-		this.reason = reason;
+		this.com = com;
 		this.duration = duration;
+		this.value = value;
+		this._content = content;
+		this.videoRespond = videoRespond;
+		this.aspectRatio = aspectRatio;
+		this.list = list;
+		this.reasonads = reasonads;
 
 	}
 
