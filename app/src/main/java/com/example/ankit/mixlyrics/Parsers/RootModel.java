@@ -2,41 +2,41 @@ import java.util.ArrayList;
 
 class RootModel {
 
-	public CreatorEmailModel _creatorEmail;
-	public CopyrightModel _copyright;
-	public String email;
-	public String description;
-	public String code_of_conduct;
 	public Call_for_papersModel _call_for_papers;
 	public String type;
-	public String organizer_description;
-	public String background_image;
-	public String schedule_published_on;
-	public String privacy;
-	public FlxwmModel _flxwm;
-	public ArrayList<SociallinksModel> sociallinks;
 	public String starttime;
-	public VersionModel _version;
+	public String code_of_conduct;
+	public String description;
+	public String background_image;
+	public FlxwmModel _flxwm;
+	public String email;
+	public CreatorEmailModel _creatorEmail;
 	public String organizer_name;
+	public String organizer_description;
+	public String schedule_published_on;
+	public CopyrightModel _copyright;
+	public ArrayList<SociallinksModel> sociallinks;
+	public String privacy;
+	public VersioningModel _versioning;
 
-	public RootModel(CreatorEmailModel creatorEmail, CopyrightModel copyright, String email, String description, String code_of_conduct, Call_for_papersModel call_for_papers, String type, String organizer_description, String background_image, String schedule_published_on, String privacy, FlxwmModel flxwm, ArrayList<SociallinksModel> sociallinks, String starttime, VersionModel version, String organizer_name) {
+	public RootModel(Call_for_papersModel call_for_papers, String type, String starttime, String code_of_conduct, String description, String background_image, FlxwmModel flxwm, String email, CreatorEmailModel creatorEmail, String organizer_name, String organizer_description, String schedule_published_on, CopyrightModel copyright, ArrayList<SociallinksModel> sociallinks, String privacy, VersioningModel versioning) {
 
-		this._creatorEmail = creatorEmail;
-		this._copyright = copyright;
-		this.email = email;
-		this.description = description;
-		this.code_of_conduct = code_of_conduct;
 		this._call_for_papers = call_for_papers;
 		this.type = type;
-		this.organizer_description = organizer_description;
-		this.background_image = background_image;
-		this.schedule_published_on = schedule_published_on;
-		this.privacy = privacy;
-		this._flxwm = flxwm;
-		this.sociallinks = sociallinks;
 		this.starttime = starttime;
-		this._version = version;
+		this.code_of_conduct = code_of_conduct;
+		this.description = description;
+		this.background_image = background_image;
+		this._flxwm = flxwm;
+		this.email = email;
+		this._creatorEmail = creatorEmail;
 		this.organizer_name = organizer_name;
+		this.organizer_description = organizer_description;
+		this.schedule_published_on = schedule_published_on;
+		this._copyright = copyright;
+		this.sociallinks = sociallinks;
+		this.privacy = privacy;
+		this._versioning = versioning;
 
 	}
 
