@@ -1,4 +1,4 @@
-import json
+import json,sys
 from os import mkdir, chdir ,path , walk
 import re
 from urllib.request import urlopen
@@ -463,7 +463,7 @@ def zipdir(path, ziph):
 #                   }"""
 
 #_target_json = re_format_json(_target_json)
-with open('tjson.json','r') as f:
+with open(sys.argv[1],'r') as f:
     _target_json = re_format_json(f.read())
     if not path.isdir('Parsers'):
         mkdir('Parsers')
